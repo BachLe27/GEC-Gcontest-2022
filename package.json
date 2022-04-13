@@ -1,0 +1,24 @@
+{
+  "name": "gec-gcontest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.2",
+    "config": "^3.3.7",
+    "express": "^4.17.3",
+    "express-validator": "^6.14.0",
+    "moment": "^2.29.1",
+    "mongoose": "^6.2.6",
+    "nodemon": "^2.0.15",
+    "pug": "^3.0.2",
+    "xlsx": "^0.18.5"
+  }
+}

@@ -1,0 +1,4 @@
+{
+   "mongoURI": "mongodb+srv://admin:UE5xBw95GrcqaU5s@gec-form.43ye4.mongodb.net/GEC?retryWrites=true&w=majority",
+   "jwtSecret": "bachlamsung123"
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="../css/bootstrap.min.css">
+   <link rel="stylesheet" href="../css/form.css">
+</head>
+<body>
+
+   <nav class="navbar navbar-dark bg-dark navbar-expand-md fixed-top">
+      <div class="container">
+         <a class="navbar-brand" href="/">G'Contest</a>
+
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+
+         <div class="collapse navbar-collapse justify-content-end align-center" id="main-nav">
+            <ul class="navbar-nav">
+               <li class="nav-item mx-1">
+                  <a href="#" class="nav-link text-white">Đăng ký</a>
+               </li>   
+               <li class="nav-item mx-1">
+                  <a href="#" class="nav-link text-white">Timeline</a>
+               </li>   
+               <li class="nav-item mx-1">
+                  <a href="#" class="nav-link text-white">Thể lệ</a>
+               </li>   
+               <li class="nav-item mx-1">
+                  <a href="#" class="nav-link text-white">Đối tác</a>
+               </li>
+               <li class="nav-item mx-1">
+                  <a href="#" class="nav-link text-white">Liên hệ</a>
+               </li> 
+               <li class="nav-item mx-1">
+                  <a href="#" class="nav-link text-white">Giải thưởng</a>
+               </li>     
+            </ul>
+         </div>
+      </div>
+   </nav>
+
+   <section class="main-container container p-md-4 p-3">
+      <h2 class="text-center fw-bold">Form đăng ký cuộc thi G'Contest 2022</h2>
+      <hr>
+      <div class="form-container container"> 
+         <h5 class="mt-4 mb-2 fw-bold">1.Thông tin của thí sinh</h5>
+         <p>* Bắt buộc</p>
+
+         <form action="/form/1" method="post" class="row g-3">
+
+            <div class="col-md-5">
+               <label class="form-label" for="name">Họ và tên * </label>
+               <input class="form-control" type="text" name="Họ và tên" id="name" required>
+            </div>
+
+            <div class="col-md-4">
+               <label class="form-label" for="gender">Giới tính *</label>
+               <select class="form-select" name="Giới tính" id="" required>
+                  <option value="" selected disabled>Chọn giới tính</option>
+                  <option value="Nam">Nam</option>
+                  <option value="Nữ">Nữ</option>
+                  <option value="Khác">Khác</option>
+               </select>
+            </div>
+
+            <div class="col-md-3">
+               <label class="form-label" for="DOB">Ngày sinh *</label>
+               <input class="form-control" type="date" name="Ngày sinh" required>
+            </div>
+
+            <div class="col-md-8">
+               <label class="form-label" for="email">Email *</label>
+               <input class="form-control" type="email" name="email" required>
+            </div>
+
+            <div class="col-md-4">
+               <label class="form-label" for="phone">Số điện thoại *</label>
+               <input class="form-control" type="tel" name="Số điện thoại" required>
+            </div>
+
+            <div class="col-md-12">
+               <label class="form-label" for="address">Nơi bạn đang sinh sống *</label>
+               <input class="form-control" type="text" name="Địa chỉ" required>
+            </div>
+
+            <div class="col-md-6">
+               <label class="form-label" for="work">Bạn đang học/làm việc tại*</label>
+               <input class="form-control" type="text" name="work" required>
+            </div>
+
+            <div class="col-md-6">
+               <label class="form-label" for="major">Chuyên ngành*</label>
+               <input class="form-control" type="text" name="major" required>
+            </div>
+
+            <div class="button-container d-flex flex-row justify-content-center mt-4">
+               <button type="submit" class="btn btn-primary">Tiếp tục</button>
+            </div>
+            
+         </form>
+      </div>
+   </section>
+
+ 
+   <script src="../js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
