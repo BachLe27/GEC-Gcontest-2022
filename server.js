@@ -2,8 +2,17 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const database = require('./config/db');
+const http = require('http');
+const https = require('https');
+const fs = require('fs');
 
-const PORT = process.env.PORT || 3001;
+const credentials = {
+ ca: fs.readFileSync("./sslcert/ca_bundle.crt"),
+ key: fs.readFileSync("./sslcert/private.key"),
+ cert: fs.readFileSync("./sslcert/certificate.crt")
+};
+
+const PORT = process.env.PORT || 8443;
 
 app.use(express.static('views'));
 app.use(bodyParser.urlencoded({extended: true}));
@@ -18,9 +27,6 @@ app.get('/test', (req, res) => {
    res.sendFile(__dirname + '/views/test.html');
 })
 
-app.get('/.well-known/acme-challenge/pPmbHnVkEgDjD2yqfBVw5blzWSsjXdH3RNq6rTJsWM0', (req, res) => { 
-   res.sendFile(__dirname + '/.well-known/acme-challenge/pPmbHnVkEgDjD2yqfBVw5blzWSsjXdH3RNq6rTJsWM0');
-})
 
 // Connect to database
 database();
@@ -31,6 +37,13 @@ app.use('/', require('./routes/main'));
 app.use('/form', require('./routes/form'));
 app.use('/manager', require('./routes/manager'));
 
-app.listen(PORT, () => {
-   console.log(`Listening on port ${PORT}`);
-})
+var httpServer = http.createServer(app);
+var httpsServer = https.createServer(credentials, app);
+
+httpServer.listen(8080, () => { 
+   console.log('HTTP Server running on port 8080');
+});
+
+httpsServer.listen(8443, () => {
+   console.log('HTTPS Server running on port 8443');
+});
