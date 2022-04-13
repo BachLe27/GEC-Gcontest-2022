@@ -18,8 +18,13 @@ app.get('/test', (req, res) => {
    res.sendFile(__dirname + '/views/test.html');
 })
 
+app.get('/.well-known/acme-challenge/SqkFVMxHhw1_Ccv1IgDlPLkQMqhp9-gK-A_gLSndLig', (req, res) => { 
+   res.sendFile(__dirname + '/.well-known/acme-challenge/SqkFVMxHhw1_Ccv1IgDlPLkQMqhp9-gK-A_gLSndLig');
+})
+
 // Connect to database
 database();
+
 
 //router
 app.use('/', require('./routes/main'));
