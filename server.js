@@ -18,8 +18,8 @@ app.get('/test', (req, res) => {
    res.sendFile(__dirname + '/views/test.html');
 })
 
-app.get('/.well-known/acme-challenge/SqkFVMxHhw1_Ccv1IgDlPLkQMqhp9-gK-A_gLSndLig', (req, res) => { 
-   res.sendFile(__dirname + '/.well-known/acme-challenge/SqkFVMxHhw1_Ccv1IgDlPLkQMqhp9-gK-A_gLSndLig');
+app.get('/.well-known/acme-challenge/pPmbHnVkEgDjD2yqfBVw5blzWSsjXdH3RNq6rTJsWM0', (req, res) => { 
+   res.sendFile(__dirname + '/.well-known/acme-challenge/pPmbHnVkEgDjD2yqfBVw5blzWSsjXdH3RNq6rTJsWM0');
 })
 
 // Connect to database
