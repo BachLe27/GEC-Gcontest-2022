@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed&display=swap');
 
-:root {
-   --main-font: 'Roboto Condensed', sans-serif;
-}
 
 * {
    box-sizing: border-box;
@@ -25,4 +22,13 @@ h2, h5 {
    border: 1px solid var(--bs-gray);
    border-radius: 1rem;
    padding: 1rem;
+}
+
+.btn-primary {
+   background-color: #03045E !important;
+}
+
+/* Table */
+thead, td, th {
+   min-width: 10vw !important;
 }

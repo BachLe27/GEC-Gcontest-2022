@@ -17,6 +17,7 @@
    <link rel="stylesheet" href="./css/index.css">
    <link rel="stylesheet" href="./css/animation.css">
 </head>
+
 <body>
 
    <!-- Navbar -->
@@ -33,20 +34,20 @@
             <ul class="navbar-nav">
                
                <li class="nav-item">
-                  <a href="#page-header" class="nav-link text-white active mx-lg-2">Đăng ký</a>
+                  <a href="/form" class="nav-link text-white fw-bold active mx-lg-2">Đăng ký ngay</a>
                </li>
 
                <li class="nav-item">
-                  <a href="#about" class="nav-link text-white mx-lg-2">Về chúng tôi</a>
+                  <a href="#intro" class="nav-link text-white mx-lg-2">Giới thiệu</a>
                </li>
 
                <li class="nav-item">
-                  <a href="#timeline-mark" class="nav-link text-white mx-lg-2">Timeline</a>
+                  <a href="#timeline" class="nav-link text-white mx-lg-2">Thể lệ</a>
                </li>
                
-               <li class="nav-item">
+               <!-- <li class="nav-item">
                   <a href="#rule" class="nav-link text-white mx-lg-2">Thể lệ</a>
-               </li>   
+               </li>    -->
 
                <li class="nav-item">
                   <a href="#rewards" class="nav-link text-white mx-lg-2">Giải thưởng</a>
@@ -57,7 +58,7 @@
                </li>
 
                <li class="nav-item">
-                  <a href="#contact" class="nav-link text-white mx-lg-2">Liên hệ</a>
+                  <a href="#about" class="nav-link text-white mx-lg-2">Về chúng tôi</a>
                </li> 
                   
             </ul>
@@ -70,17 +71,15 @@
    <!-- Page Header -->
    <header class="container d-flex flex-nowrap align-items-center justify-content-center flex-column flex-md-row" id="page-header">
 
-      <div class="vertical-line d-none d-md-block order-0" data-aos="fade-right" data-aos-duration="1200"></div>
+      <!-- <div class="vertical-line d-none d-md-none order-0" data-aos="fade-right" data-aos-duration="1200"></div> -->
 
-      <div class="page-header__left d-flex me-md-5 mt-5 mt-md-0 order-1 col-md-5" data-aos="fade-right" data-aos-duration="1200">
+      <div class="page-header__left d-flex me-md-5 mt-5 mt-md-0 order-1 col-md-5 px-3" data-aos="fade-down" data-aos-duration="1200">
 
          <!-- <div class="vertical-line h-100 d-md-none"></div> -->
 
-         <div class="page-header__left__text">
-            <p>Cuộc thi</p>
-            <h1 class="page-header__left__text__title">G'Contest 2022</h1>
-            <p>KINH TẾ SỐ</p>
-            <p>Đề xuất chính sách cho doanh nghiệp dựa trên Data Analysis.</p>
+         <div class="page-header__left__text text-center">
+            <h1 class="page-header__left__text__title">G'Contest</h1>
+            <p class="fw-bold">NHÀ KINH TẾ TÀI BA 2022</p>
 
             <form class="d-flex align-items-center justify-content-center" action="/form" method="get">
                <button class="page-header__left__button btn btn-outline-primary mt-3" type="submit">Đăng ký ngay</button>
@@ -89,55 +88,43 @@
          </div>
       </div>
 
-      <div class="page-header__right order-md-2 order-0 col-md-6" data-aos="fade-left" data-aos-duration="1200">
-         <img class="img-fluid" src="/assets/img/20-650x400.jpg" alt="">
+      <div class="page-header__right order-md-2 order-0 col-md-6" data-aos="fade-down" data-aos-duration="700" >
+         <img class="img-fluid" src="./assets/img/20-650x400.jpg" alt="">
       </div>
+      
    </header>
    <!-- End Page Header -->
 
-
-   <!-- About: Details about contest and Club -->
-   <section class="d-flex flex-column py-5" id="about">
-
-      <!-- GEC -->
-      <div class="about__gec d-flex flex-md-row flex-column container align-items-center justify-content-center mb-md-5" data-aos="fade-right" data-aos-duration="1500">
-         
-         <div class="about__gec__left d-flex align-items-center justify-content-center col-md-5 col-12">
-            <img class="img-fluid w-75" src="./assets/img/GEC-logo-white.png" alt="">
-         </div>
-
-         <div class="about__gec__right col-md-5 col-12 ms-md-5">
-            <h1 class="ms-4">GEC</h1>
-            <ul>
-               <li>CLB Kinh tế toàn cầu GEC được thành lập tháng 3 năm 2013 dưới sự bảo trợ chuyên môn của Khoa kinh tế quốc tế trường Đại học Ngoại Thương.</li>
-               <li>Sau 9 năm hoạt động, với sự không ngừng nỗ lực cố gắng của các thế hệ thành viên, GEC đã trở thành một người đồng hành đáng tin cậy đối với các bạn sinh viên trên cả nước.</li>
-            </ul>
-         </div>
-      </div>
-
+   <div id="intro"></div>
+   <!-- About: General infomation about contest-->
+   <section class="intro d-flex flex-column align-items-center justify-content-center py-4">
+      <!-- <div class="overlay"></div> -->
       <!-- GContest -->
-      <div class="about__gcontest d-flex flex-md-row flex-column container align-items-center justify-content-center" data-aos="fade-left" data-aos-duration="1500">
-         <div class="about__gcontest__left col-md-5 col-12 me-md-5 order-1 order-md-0">
-            <h1 class="text-start text-md-end">G’Contest 2022</h1>
-            <ul>
-               <li>Được tổ chức bởi Câu lạc bộ Kinh tế Toàn Cầu - GEC - Đại học Ngoại thương</li>
-               <li>Giúp các thí sinh có cơ hội ứng dụng những kiến thức về kinh tế vào thực tế doanh nghiệp, thử thách năng lực và bản lĩnh cá nhân, đề ra các chính sách doanh nghiệp trong bối cảnh nhiều biến động hiện nay, đồng thời là cầu nối giữa các bạn sinh viên và những doanh nghiệp lớn, các tổ chức kinh tế uy tín đồng hành cùng cuộc thi.</li>
-            </ul>
+      <div class="about__gcontest d-flex flex-md-row flex-column container align-items-center justify-content-center">
+
+         <div class="about__gcontest__left col-md-6 col-12 me-md-5 order-1 order-md-0 p-3">
+            <h1 class="text-start text-md-end ms-md-0 ms-4 text-center">G’Contest 2022</h1>
+            <p>Khởi đầu từ năm 2016, trải qua 3 mùa thi, G'Contest đã tạo nên những thành công vô cùng vang dội. Với sứ mệnh tạo ra một sân chơi trí tuệ chuyên nghiệp và uy tín, cùng với đó giúp các bạn sinh viên có cơ hội ứng dụng những kiến thức về kinh tế vào thực tế doanh nghiệp. 
+            </p>
+
+            <p>
+            Cuộc thi G'Contest, sau 3 năm vắng bóng, nay đã quay trở lại, hứa hẹn tạo nên một cuộc thi vô cùng hấp dẫn với những sự đổi mới. G'Contest 2022 chắc chắn sẽ là nơi để các bạn sinh viên học hỏi, tích lũy và bứt phá giới hạn của bạn thân.</p>
          </div>
-         <div class="about__gcontest__right d-flex align-items-center justify-content-center col-md-5 col-12 order-0 order-md-1">
-            <img class="img-fluid w-50" src="./assets/img/FTU.png" alt="">
+         <div class="about__gcontest__right d-flex align-items-center justify-content-center col-md-5 col-12 order-0 order-md-1 mb-5">
+            <img class="img-fluid w-50" src="./assets/img/FTU.png" alt="" data-aos="fade-down" data-aos-duration="1200">
          </div>
       </div>
-      <div id="timeline-mark"></div>
+      <div id="timeline"></div>
    </section>
+   
 
 
    <!-- Timeline for the contest-->
 
-   <section id="timeline" class="py-5 container">
+   <section class="py-5 container timeline">
 
-      <div class="timeline__title d-flex justify-content-center flex-column align-items-center" data-aos="fade-up" data-aos-duration="1000">
-         <h1 class="fw-bold text-center">Timeline cuộc thi</h1>
+      <div class="timeline__title d-flex justify-content-center flex-column align-items-center">
+         <h1 class="fw-bold text-center">Thể lệ cuộc thi</h1>
          <div class="w-25 line"></div>
       </div>
 
@@ -145,32 +132,21 @@
       <div class="timeline__container">
 
          <!-- Round 1 -->
-         <div class="timeline__row" data-aos="fade-right" data-aos-duration="1200">
+            <div class="timeline__row mb-5" data-aos="fade-right" data-aos-duration="1200">
 
                <div class="timeline__time">
                   <h4>25/04 - 10/05<h4/>
                </div>
-
                <!-- content -->
                <div class="timeline__content d-flex justify-content-center flex-column px-lg-5">
                   <h4 class="fw-bold">Vòng 1 - Vòng đơn</h4>
-                  <p> - Các đội thi sẽ có từ 2 - 3 thành viên. </p>
-                  <p> - Ban tổ chức mở đơn theo hình thức "Nộp CV của nhóm", bao gồm: Thông tin thành viên và CV từng cá nhân. </p> 
-                  <p> 
-                     - Hai hình thức nộp đơn: 
-                     <ul class="my-0"> 
-                        <li>Online: qua mẫu đăng ký online của BTC</li>
-                        <li>Offline: nộp trực tiếp tại Trường Đại học Ngoại Thương Hà Nội.</li>
-                     </ul>
-                  </p>
-                  <p>
-                     <span class="fw-bold">Lưu ý:</span> Đối với các đội thi không đủ 3 thành viên, ban tổ chức sẽ tiến hành ghép đội cho các thí sinh.
-                  </p>
+                  <p>Đăng ký thông tin cá nhân, nộp CV</p>
                </div>
          </div>
+         
 
          <!-- Round 2 -->
-         <div class="timeline__row" data-aos="fade-left" data-aos-duration="1200">
+         <div class="timeline__row mb-5" data-aos="fade-up" data-aos-duration="1200">
 
             <div class="timeline__time">
                <h4>13/05 – 20/05</h4>
@@ -180,26 +156,12 @@
             <div class="timeline__content d-flex justify-content-center flex-column px-lg-5">
                <!-- <div class="timeline__title"> -->
                <h4 class="fw-bold">Vòng 2 - Đánh giá năng lực</h4>
-               <!-- </div> -->
-               <p>- Các đội tham gia làm trắc nghiệm nhóm. </p>
-               <p>- Nội dung gồm có: </p>
-               <ul class="ms-2">
-                  <li>IQ</li>
-                  <li>Kiến thức liên quan tới chủ đề</li>
-                  <li>Kiến thức về kỹ năng phân tích dữ liệu (câu hỏi lý thuyết và câu hỏi yêu
-                     cầu sử dụng kiến thức liên quan đến xác suất thống kê)</li>
-               </ul>
-               <p> - Các đội thi truy cập vào đường link BTC cung cấp trong khung giờ quy định, BTC theo dõi link để đảm bảo có đủ thành viên tham dự, khi kết thúc thời gian làm bài, form tự động đóng.
-               </p>
-               <ul>
-                  <li>Thời gian làm bài: 30 phút</li>
-                  <li>Cấu trúc đề: 40 câu trắc nghiệm</li>
-               </ul>
+               <p>Các đội thi làm bài trắc nghiệm nhóm đánh giá IQ, kiến thức liên quan tới chủ đề, kiến thức về kỹ năng phân tích dữ liệu,...</p>
             </div>
          </div>
 
          <!-- Round 3 -->
-         <div class="timeline__row" data-aos="fade-right" data-aos-duration="1200">
+         <div class="timeline__row mb-5" data-aos="fade-right" data-aos-duration="1200">
 
             <div class="timeline__time">
                <h4>21/05 – 10/06<h4/>
@@ -208,17 +170,13 @@
             <!-- content -->
             <div class="timeline__content d-flex justify-content-center flex-column px-lg-5">
                <h4 class="fw-bold">Vòng 3 - Đề án</h4>
-               <p> - 8 đội thi (từ 19 - 24 thí sinh), thi đấu theo 2 bảng; từ đó chọn ra 4 đội có số điểm cao nhất tiến vào vòng chung kết.</p>
-               <p> - Mỗi đội thi nhận 01 bộ đề (câu hỏi đề bài và data sample) của Doanh nghiệp giả định
-                  thuộc các lĩnh vực: E-commerce, FMCG, phân tích data được cung cấp để có được
-                  dynamic dashboard (data visualization).</p> 
-               <p> - Thí sinh nộp bài, bao gồm có: file xử lí dữ liệu và slide PDF, giới hạn từ 15 - 20 slide.</p>
-               
+               <p>Ban Tổ chức chia thí sinh thành 8 đội, thi đấu theo 2 bảng; từ đó chọn ra 4 đội có số điểm cao nhất tiến vào vòng chung kết. </p>
+               <p>Mỗi đội thi nhận 01 bộ đề (câu hỏi đề bài và data sample) của doanh nghiệp giả định, phân tích data được cung cấp để có được dynamic dashboard (data visualization)</p>
             </div>
          </div>
 
          <!-- Round 4 -->
-         <div class="timeline__row" data-aos="fade-left" data-aos-duration="1200">
+         <div class="timeline__row mb-5" data-aos="fade-up" data-aos-duration="1200">
             
             <div class="timeline__time">
                <h4> 12/06</h4>
@@ -226,27 +184,11 @@
             
             <div class="timeline__content d-flex justify-content-center flex-column px-lg-5">
                <h4 class="fw-bold">Vòng 4 - Chung kết </h4>
-               <p>- Đêm chung kết bao gồm 03 chặng với sự tham gia của 04 đội thi xuất sắc nhất: </p>
-               <p class="fw-bold"> Chặng 1: Trả lời câu hỏi </p>
-               <ul class="ms-2">
-                  <li>MC lần lượt đọc từng câu hỏi </li>
-                  <li>Các đội bấm chuông để giành quyền trả lời</li>
-                  <li>Với mỗi câu trả lời sai sẽ có một cơ hội bấm chuông giành quyền trả lời cho các đội còn lại</li>
-               </ul>
-               
-               <p class="fw-bold"> Chặng 2: Thuyết trình đề án</p>
-               <ul class="ms-2">
-                  <li>04 đội thi lần lượt thuyết trình về đề án của mình (thời gian thuyết trình: 15 phút)</li>
-                  <li>Các đội lần lượt phản biện theo cặp</li>
-                  <li>Mỗi đội nhận phần nhận xét và phản biện từ BGK</li>
-               </ul>
-
-               <p class="fw-bold"> Chặng 3: 02 đội xuất sắc nhất sẽ tiến vào chặng 3</p>
-               <ul class="ms-2">
-                  <li>Đội 1 nhận đề bài  là 1 câu hỏi tình huống xoay quanh đề án, thời gian suy nghĩ và đưa ra câu trả lời: 4 phút</li>
-                  <li>Sau khi trả lời, đội thi nhận lời nhận xét và phản biện từ BGK</li>
-                  <li>Tương tự với đội còn lại</li>
-               </ul>
+               <p>
+                  Đêm chung kết bao gồm 02 chặng với sự tham gia của 04 đội thi xuất sắc nhất
+               </p>
+               <p> - Chặng 1: Thuyết trình đề án </p>
+               <p> - Chặng 2: 02 đội xuất sắc nhất sẽ tiến vào chặng 2</p>
             </div>
          </div>
          
@@ -254,59 +196,116 @@
       
    </section>
 
-   <!-- Rules of contest -->
-   <section id="rule">
-
-   </section>
-
 
    <!-- Rewards -->
-   <section id="rewards">
-
+   <section id="rewards" class="py-5">
+      <h1 class="fw-bold text-center text-white">Cơ cấu giải thưởng</h1>
+      
    </section>
 
+   <div id="partners"></div>
 
    <!-- Partners -->
-   <section id="partners">
+   <section class="partners py-5 text-center">
       <!-- <div id="contact-mark"></div> -->
+      <h1 class="fw-bold text-center mb-5">Đơn vị đồng hành</h1>
+
+      <div class="parter__item">
+         <h5 class="fw-bold">Ban tổ chức</h5>
+      </div>
+
+      <div class="parter__item">
+         <h5 class="fw-bold">Nhà bảo trợ chuyên môn</h5>
+      </div>
+
+      <div class="parter__item">
+         <h5 class="fw-bold">Nhà tài trợ vàng</h5>
+      </div>
+
+      <div class="parter__item">
+         <h5 class="fw-bold">Nhà tài trợ bạc</h5>
+      </div>
+
+      <div class="parter__item">
+         <h5 class="fw-bold">Nhà tài trợ đồng</h5>
+      </div>
+
+      <div class="parter__item">
+         <h5 class="fw-bold">Nhà tài đồng hành</h5>
+      </div>
+
+      <div class="parter__item">
+         <h5 class="fw-bold">Nhà tài hiện vật</h5>
+      </div>
+
+      <div class="parter__item">
+         <h5 class="fw-bold">Bảo trợ truyền thông</h5>
+      </div>
+      <div id="about"></div>
    </section>
    
+   <!-- About -->
+
+   <section class="about py-5 d-flex align-items-center">
+      
+      <div class="container d-flex flex-column px-5">
+         <div class="about__title mb-3">
+            <h2 class="fw-bold">Về chúng tôi</h2>
+         </div>
+
+         <div class="about__desc col-lg-6">
+            <p>CLB Kinh tế toàn cầu GEC được thành lập tháng 3 năm 2013 dưới sự bảo trợ chuyên môn của Khoa kinh tế quốc tế trường Đại học Ngoại Thương. Sau 9 năm hoạt động, với sự không ngừng nỗ lực cố gắng của các thế hệ thành viên, GEC đã trở thành một người đồng hành đáng tin cậy đối với các bạn sinh viên trên cả nước.</p>
+         </div>
+         
+         <form action="/form" method="get" class="d-flex align-items-center justify-content-center justify-content-lg-start col-lg-6 ">
+            <button type="submit" class="btn btn-primary px-5">Đăng ký ngay</button>
+         </form>
+      </div>
+      
+   </section>
 
    <!-- Contact -->
-   <footer id="contact" class="contact py-5 container">
-      <div class="p-md-3 ps-5">
-         <h1 class="contact__title fw-bold p-0 fs-1"><img class="img-fluid" src="/assets/img/GEC Logo.png" alt=""> CONTACT US </h1>
-         <div class="line w-25"></div>
-      </div>
+   <footer id="contact" class="contact py-5 justify-content-center align-items-center d-lg-block d-flex flex-column">
 
-      <div class="mt-0 mt-lg-5 d-flex flex-column flex-lg-row p-5 p-md-3">
+      <div class="overlay"></div>
 
-         <div class="desc__left col-lg-4 col-12">
-            <h4 class="fw-bold">CLB Kinh tế Toàn cầu - GEC FTU</h4>
-            <p class="m-0"><i class="bi bi-house-fill m-1"></i>Trường Đại học Ngoại Thương</p>
-            <p class="m-0"> <i class="bi bi-geo-alt-fill m-1"></i>Số 91, Chùa Láng, Đống Đa, Hà Nội</p>
-            <p">CLB Kinh tế toàn cầu GEC được thành lập tháng 3 năm 2013 dưới sự bảo trợ chuyên môn của Khoa kinh tế quốc tế trường Đại học Ngoại Thương. Sau 9 năm hoạt động, với sự không ngừng nỗ lực cố gắng của các thế hệ thành viên, GEC đã trở thành một người đồng hành đáng tin cậy đối với các bạn sinh viên trên cả nước.</p>
+      <div class="container d-flex flex-column justify-content-center align-items-lg-start align-items-center">
+
+         <div class="ps-lg-3 d-flex flex-row">
+            <img class="img-fluid me-2" src="./assets/img/GEC Logo - white.png" alt="">
+            <h1 class="contact__title fw-bold p-0 mt-2">CONTACT US </h1>
+            <!-- <h1 class="contact__title fw-bold">CONTACT US</h1> -->
          </div>
-
-         <div class="desc__middle col-lg-4 col-12 d-flex flex-column px-lg-5 ms-lg-4">
-            <h4 class="fw-bold">Liên hệ</h4>
-            <p><i class="bi bi-chat-left-fill m-1"></i>Ms. Bùi Thảo Mai</p>
-            <p><i class="bi bi-person-lines-fill m-1"></i>Chủ tịch Câu lạc bộ Kinh tế Toàn cầu</p>
-            <p><i class="bi bi-telephone-fill m-1"></i>0975860201</p>
-            <p><i class="bi bi-envelope-fill m-1"></i>maibt08.gec@gmail.com</p>
-         </div>
-
-         <div class="desc__right col-lg-4 col-12">
-            <h4 class="fw-bold">Social Network</h4>
-            <div class="social" onclick="location.href='https://www.facebook.com/gec.ftu'">
-               <p><i class="bi bi-facebook m-1"></i>CLB Kinh Tế Toàn Cầu - GEC FTU</p>
+         <!-- <div class="ms-lg-3 mt-2 line"></div> -->
+   
+         <div class="mt-5 d-flex flex-column flex-lg-row p-md-3">
+            <div class="desc__left col-lg-4 col-12 mt-3">
+               <h5 class="fw-bold">CLB Kinh tế Toàn cầu - GEC FTU</h5>
+               <p class=""><i class="bi bi-house-fill m-1"></i>Trường Đại học Ngoại Thương</p>
+               <p class=""> <i class="bi bi-geo-alt-fill m-1"></i>Số 91, Chùa Láng, Đống Đa, Hà Nội</p>
+               <!-- <p">CLB Kinh tế toàn cầu GEC được thành lập tháng 3 năm 2013 dưới sự bảo trợ chuyên môn của Khoa kinh tế quốc tế trường Đại học Ngoại Thương. Sau 9 năm hoạt động, với sự không ngừng nỗ lực cố gắng của các thế hệ thành viên, GEC đã trở thành một người đồng hành đáng tin cậy đối với các bạn sinh viên trên cả nước.</p> -->
             </div>
-
-            <div class="social">
-               <p><i class="bi bi-youtube m-1"></i>CLB Kinh Tế Toàn Cầu - GEC FTU</p>
+            <div class="desc__middle col-lg-4 col-12 d-flex flex-column px-lg-5 ms-lg-4 mt-3">
+               <h5 class="fw-bold">Liên hệ</h5>
+               <p><i class="bi bi-chat-left-fill m-1"></i>Ms. Bùi Thảo Mai</p>
+               <!-- <p><i class="bi bi-person-lines-fill m-1"></i>Chủ tịch Câu lạc bộ Kinh tế Toàn cầu</p> -->
+               <p><i class="bi bi-telephone-fill m-1"></i>0975860201</p>
+               <p><i class="bi bi-envelope-fill m-1"></i>maibt08.gec@gmail.com</p>
+            </div>
+   
+            <div class="desc__right col-lg-4 col-12 mt-3">
+               <h5 class="fw-bold">Social Network</h5>
+               <div class="social" onclick="location.href='https://www.facebook.com/gec.ftu'">
+                  <p><i class="bi bi-facebook m-1"></i>CLB Kinh Tế Toàn Cầu - GEC FTU</p>
+               </div>
+   
+               <div class="social">
+                  <p><i class="bi bi-youtube m-1"></i>CLB Kinh Tế Toàn Cầu - GEC FTU</p>
+               </div>
             </div>
          </div>
       </div>
+      
    </footer>
 
 

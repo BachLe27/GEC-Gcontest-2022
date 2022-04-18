@@ -23,14 +23,10 @@ router.get('/:formID', (req, res) => {
    }
    
    let form = app.get('form');
-   console.log(form);
+   // console.log(form);
 
-   if (form == undefined) 
-      res.redirect('/form');
-
-   if (formID == form.currentForm - 1 || (formID == 2 && form.currentForm == 4)) {
-      form.currentForm = formID;
-   }
+   // User skip 
+   if (form == undefined) res.redirect('/form');
 
    if (formID != form.currentForm) {
       res.redirect(`/form/${form.currentForm}`);
@@ -49,21 +45,44 @@ router.post('/:formID', (req, res) => {
 
 
    switch(formID) {
+      case 1: 
+         for (let x in req.body) {
+            form.field.push(x);
+            form.input.push(req.body[x]);
+         }
+         
+         form.currentForm = nextForm;
+
+         app.set('form', form);
+
+         res.redirect(`/form/${nextForm}`);
+         break;
+
       case 2:
          for (let x in req.body) {
             form.field.push(x);
             form.input.push(req.body[x]);
          }
 
+         form.currentForm = nextForm;
          app.set('form', form);
-         if (req.body.team == 'false') {
-            nextForm ++;
+
+         if (form.input[form.input.length - 1] == 'Chưa') {
+            const sendForm = new Form({
+               field: form.field,
+               input: form.input
+            }) 
+            sendForm.save();
+            res.sendFile('success.html', {root: path.join(__dirname, '../views/form')});
          }
 
-         form.currentForm = nextForm;
-         res.redirect(`/form/${nextForm}`);
+         else {
+            res.redirect(`/form/${nextForm}`);
+         }
+
+         
          break;
-      case 4: 
+      case 3: 
          
          for (let x in req.body) {
             form.field.push(x);
@@ -77,7 +96,7 @@ router.post('/:formID', (req, res) => {
          }
 
          
-         console.log(form);
+         // console.log(form);
          
          const sendForm = new Form({
             field: form.field,
@@ -89,18 +108,7 @@ router.post('/:formID', (req, res) => {
          res.sendFile('success.html', {root: path.join(__dirname, '../views/form')});
          break;
       default:
-         form.currentForm = nextForm;
-
-         for (let x in req.body) {
-            form.field.push(x);
-            form.input.push(req.body[x]);
-         }
-
-         // for (let x in req.body) {
-         //    form[x] = req.body[x];
-         // }
-         app.set('form', form);
-         res.redirect(`/form/${nextForm}`);
+         res.sendFile('form.html', {root: path.join(__dirname, '../views/form')});
          break;
    }
    

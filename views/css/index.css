@@ -1,38 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 
 :root {
-   --main-font: 'Roboto Condensed', sans-serif;
+   --main-font: 'Montserrat', sans-serif;
 }
 
 * {
    box-sizing: border-box;
    font-family: var(--main-font);
+   /* overflow-x: hidden; */
+   /* overflow-y: hidden; */
 }
 
 .nav-link:hover{
    color: var(--bs-blue) !important;
 }
 
+html,body {
+   margin:0;
+   padding:0;
+}
 
-html {
+/* html {
    -webkit-box-sizing: border-box;
    -moz-box-sizing: border-box;
    box-sizing: border-box;
- }
- 
-* {
-   padding: 0;
-   margin: 0;
-}
+} */
 
-*, *:before, *:after {
+/* *, *:before, *:after {
    -webkit-box-sizing: inherit;
    -moz-box-sizing: inherit;
    box-sizing: inherit;
-}
+} */
 
-#page-header, #about, #timeline, #rule, #partners, #rewards {
+#page-header, #rule, #rewards {
    min-height: 100vh;
 }
 
@@ -41,11 +43,11 @@ html {
 }
 
 #rewards {
-   background-color: rgb(252, 255, 66);
+   background-color: rgb(13, 22, 99);
 }
 
 #partners {
-   background-color: rgb(243, 174, 174);
+   background-color: rgb(255, 255, 255);
 }
 
 
@@ -64,6 +66,7 @@ a.navbar-brand {
 .bi-list{
    font-size: 2.2rem;
    color: #fff;
+   overflow-y: hidden;
 }
 
 .bi-x-lg {
@@ -104,7 +107,10 @@ a.navbar-brand {
 /* Page-header */
 #page-header {
    height: 680px;
+   padding: 0 1rem;
+   /* background: url("../assets/img/1048-1920x1080.jpg") center center/cover no-repeat; */
 }
+
 
 .page-header__left p {
    margin: 0!important;
@@ -115,9 +121,15 @@ a.navbar-brand {
 }
  
 .page-header__left__text__title {
-   font-size: 3.5rem;
+   font-size: 4.5rem;
    font-weight: bold;
    color: #03045E;
+}
+
+@media screen and (max-width: 992px) {
+   .page-header__left__text__title {
+      font-size: 3.5rem;
+   }
 }
 
 .page-header__left form {
@@ -144,22 +156,34 @@ a.navbar-brand {
 }
 
 
-/* About */
+/* Intro */
 
-#about {
+.intro {
+   min-height: 80vh;
    color: rgb(231, 231, 231);
-   background-image: radial-gradient( circle 610px at 5.2% 51.6%,  rgba(5,8,114,1) 0%, rgba(7,3,53,1) 97.5% );
+   background-image: radial-gradient( circle 610px at 35.2% 61.6%,  rgba(5,8,114,0.9) 0%, rgba(7,3,53,1) 97.5% );
+   /* box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px; */
+   /* background: url('../assets/img/bg.jpg') fixed center center/cover; */
+   position: relative;
 }
 
-#about h1 {
+.intro .overlay {
+   position: absolute;
+   z-index: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.5);
+}
+
+.intro .about__gcontest{
+   z-index: 1;
+}
+
+.intro h1 {
    font-weight: bold;
 }
 
-.about__gcontest__left li {
-   text-align: justify;
-}
-
-.about__gec__right li {
+.about__gcontest__left p {
    text-align: justify;
 }
 
@@ -170,17 +194,17 @@ a.navbar-brand {
    border-bottom: #03045E 3px solid;
 }
 
-#timeline {
+.timeline {
    background-color: #ffffff;
    color: #000;
 }
 
-#timeline p {
-   margin: 0.5rem;
+.timeline p {
+   /* margin: 0.5rem; */
 }
 
-#timeline h4 {
-   margin: 0rem;
+.timeline h4 {
+   /* margin: 0rem; */
    color: #03045E;
 }
 
@@ -215,7 +239,7 @@ a.navbar-brand {
    padding-left: 50%;
    position: relative;
    /* margin-bottom: 30px; */
-   min-height: 70vh;
+   /* min-height: 20vh; */
    /* padding: 0 2rem; */
 }
 
@@ -252,14 +276,6 @@ a.navbar-brand {
 
 .timeline__row .timeline__content {
    position: relative;
-   /* padding: 20px 30px; */
-   /* background: #ffffff; */
-   -webkit-border-radius: 4px;
-   -moz-border-radius: 4px;
-   border-radius: 4px;
-   /* display: flex;
-   justify-content: center;
-   flex-direction: column; */
 }
 
 .timeline__row:nth-child(even) .timeline__content {
@@ -362,18 +378,76 @@ a.navbar-brand {
 
 
 
-/* --------Rules-------- */
+/* --------Rewards-------- */
 
+
+/* --------Partner--------*/
+.partners {
+   min-height: 100vh;
+}
+
+.parter__item {
+   min-height: 30vh;
+}
+
+
+
+/* --------About--------*/
+.about {
+   /* linear-gradient(rgba(5,8,114,0.7), rgba(7,3,53,0.8) */
+   /* linear-gradient(rgba(3, 5, 94, 0.5), rgba(21, 0, 141, 0.6)) */
+   background: linear-gradient(rgba(5,8,114,0.7), rgba(7,3,53,0.8)), url('../assets/img/bg.jpg') center center/cover;
+   min-height: 60vh;
+   color: #fff;
+}
+
+.about__desc {
+
+}
+
+.about button {
+   background-color: #03045E;
+}
 
 
 /* --------Contact-------- */
 
-#contact {
+.contact {
    min-height: 50vh;
+   /* background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(37,145,251,0.98) 0.1%, rgba(0,7,128,1) 99.8% ); */
+   background: linear-gradient(rgba(5,8,114,0.7), rgba(7,3,53,0.5)), url('../assets/img/bg-1.png') right top fixed;
+   color: #fff;
+   position: relative;
+   text-shadow: 2px 2px #000;
 }
 
-.contact h4 {
-   color: #03045E;
+.contact .overlay {
+   background-color: rgba(0, 0, 0, 0.288);
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   top: 0;
+   z-index: 0;
+}
+
+
+.contact .container {
+   z-index: 1;
+   position: relative;
+   min-height: 60vh;
+}
+
+.contact h5 {
+   color: #ffffff;
+   margin-bottom: 1rem;
+}
+
+.contact p {
+   text-shadow: none;
+}
+
+.contact i {
+   text-shadow: 2px 2px #000;
 }
 
 .social:hover {
@@ -382,13 +456,20 @@ a.navbar-brand {
 
 .social p {
    font-size: 1.05rem;
+   color: #fff;
 }
 
 .social p i {
-   font-size: 2rem;
+   font-size: 1.8rem;
 }
 
 .contact__title {
    font-size: 2.5rem !important;
-   color: #03045E;
+   color: #ffffff;
+   
+}
+
+.contact .line {
+   width: 340px;
+   border-bottom: #ffffff 3px solid;
 }
