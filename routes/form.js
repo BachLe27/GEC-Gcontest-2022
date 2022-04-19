@@ -48,11 +48,13 @@ router.post('/:formID', (req, res) => {
 
    switch(formID) {
       case 1: 
-         if (form.field.includes(x)) {
-            form.input[form.field.indexOf(x)] = req.body[x];
-         } else {
-            form.field.push(x);
-            form.input.push(req.body[x]);
+         for (let x in req.body) {
+            if (form.field.includes(x)) {
+               form.input[form.field.indexOf(x)] = req.body[x];
+            } else {
+               form.field.push(x);
+               form.input.push(req.body[x]);
+            }
          }
          
          form.currentForm = nextForm;
@@ -93,11 +95,15 @@ router.post('/:formID', (req, res) => {
          break;
       case 3: 
          
-         if (form.field.includes(x)) {
-            form.input[form.field.indexOf(x)] = req.body[x];
-         } else {
-            form.field.push(x);
-            form.input.push(req.body[x]);
+         for (let x in req.body) {
+
+            if (form.field.includes(x)) {
+               form.input[form.field.indexOf(x)] = req.body[x];
+            } else {
+               form.field.push(x);
+               form.input.push(req.body[x]);
+            }
+
          }
 
          app.set('form', form);
