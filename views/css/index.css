@@ -466,10 +466,23 @@ a.navbar-brand {
 .contact__title {
    font-size: 2.5rem !important;
    color: #ffffff;
-   
 }
 
 .contact .line {
    width: 340px;
    border-bottom: #ffffff 3px solid;
+}
+
+@media screen and (max-width: 375px) {
+   .contact__title {
+      font-size: 2rem !important;
+   }
+
+   .contact__logo {
+      width: 20%;
+   }
+
+   .social p {
+      font-size: 0.9rem;
+   }
 }

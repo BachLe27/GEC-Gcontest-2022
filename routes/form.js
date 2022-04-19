@@ -23,14 +23,16 @@ router.get('/:formID', (req, res) => {
    }
    
    let form = app.get('form');
-   // console.log(form);
+   console.log(form);
 
    // User skip 
    if (form == undefined) res.redirect('/form');
 
-   if (formID != form.currentForm) {
-      res.redirect(`/form/${form.currentForm}`);
-   }
+    // Back button
+   //  if (formID == form.currentForm - 1) { 
+   //    form.currentFrom--;
+   //    res.redirect(`/form/${form.currentForm}`);
+   // }
 
    res.sendFile(`form${req.params.formID}.html`, {root: path.join(__dirname, '../views/form')});
 })
@@ -46,7 +48,9 @@ router.post('/:formID', (req, res) => {
 
    switch(formID) {
       case 1: 
-         for (let x in req.body) {
+         if (form.field.includes(x)) {
+            form.input[form.field.indexOf(x)] = req.body[x];
+         } else {
             form.field.push(x);
             form.input.push(req.body[x]);
          }
@@ -60,8 +64,14 @@ router.post('/:formID', (req, res) => {
 
       case 2:
          for (let x in req.body) {
-            form.field.push(x);
-            form.input.push(req.body[x]);
+
+            if (form.field.includes(x)) {
+               form.input[form.field.indexOf(x)] = req.body[x];
+            } else {
+               form.field.push(x);
+               form.input.push(req.body[x]);
+            }
+
          }
 
          form.currentForm = nextForm;
@@ -80,22 +90,18 @@ router.post('/:formID', (req, res) => {
             res.redirect(`/form/${nextForm}`);
          }
 
-         
          break;
       case 3: 
          
-         for (let x in req.body) {
+         if (form.field.includes(x)) {
+            form.input[form.field.indexOf(x)] = req.body[x];
+         } else {
             form.field.push(x);
             form.input.push(req.body[x]);
          }
 
          app.set('form', form);
 
-         if (form == undefined) {
-            res.redirect('/form');
-         }
-
-         
          // console.log(form);
          
          const sendForm = new Form({
