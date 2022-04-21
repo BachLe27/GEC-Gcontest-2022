@@ -32,3 +32,8 @@ h2, h5 {
 thead, td, th {
    min-width: 10vw !important;
 }
+
+.invalidFile {
+   color: rgb(216, 0, 0);
+   display: none;
+}

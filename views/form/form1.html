@@ -4,7 +4,7 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Document</title>
+   <title>Vòng 1</title>
    <link rel="stylesheet" href="../css/bootstrap.min.css">
    <link rel="stylesheet" href="../css/form.css">
    <link rel="stylesheet" href="../css/index.css">
@@ -30,7 +30,7 @@
          <h5 class="mt-4 mb-2 fw-bold">1. Thông tin của thí sinh</h5>
          <p>* Bắt buộc</p>
 
-         <form action="/form/1" method="post" class="row g-3">
+         <form action="/form/1" method="post" class="row g-3" enctype="multipart/form-data">
 
             <div class="col-md-5">
                <label class="form-label" for="name">Họ và tên * </label>
@@ -77,10 +77,11 @@
                <input class="form-control" type="text" name="Chuyên ngành" required>
             </div>
 
-            <!-- <div class="col-12">
-               <label for="CV" class="mb-1">File CV của bạn (.docx hoặc .pdf) *</label><br/>
-               <input class="form-control" type="file" id="CV" name="CV1" required>
-            </div> -->
+            <div class="col-12">
+               <label for="CV" class="mb-1">File CV của bạn (.docx, .pdf, .png, .jpg, .jpeg) *</label><br/>
+               <input class="form-control" onchange="validateFileType(this)" type="file" accept=".doc, .docx, .pdf, .png, .jpg, .jpeg" id="CV" name="CV1" required>
+               <p id="invalidFile" class="invalidFile">Chỉ hỗ trợ file có định dạng .doc, .docx hoặc .pdf</p>
+            </div>
 
             <div class="button-container d-flex flex-row justify-content-center mt-4">
                <button type="submit" class="btn btn-primary">Tiếp tục</button>
@@ -89,7 +90,8 @@
       </div>
    </section>
 
- 
+   <script src="../js/form.js"></script>
+   
    <script src="../js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

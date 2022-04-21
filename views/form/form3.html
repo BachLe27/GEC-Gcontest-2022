@@ -4,7 +4,7 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Document</title>
+   <title>Vòng 1</title>
    <link rel="stylesheet" href="../css/bootstrap.min.css">
    <link rel="stylesheet" href="../css/form.css">
    <link rel="stylesheet" href="../css/index.css">
@@ -30,11 +30,11 @@
       <!-- form -->
       <div class="form-container container"> 
          
-         <h5 class="mt-4 mb-2 fw-bold">3. Thông tin các thành viên</h5>
+         <h5 class="mt-4 mb-2 fw-bold">3. Thông tin các thành viên còn lại</h5>
          <p>* Bắt buộc</p>
 
          <!-- Member -->
-         <form action="/form/3" method="post" class="row g-3">
+         <form action="/form/3" method="post" class="row g-3" enctype="multipart/form-data">
 
             <!-- First member -->
             <p class="fw-bold mt-4 mb-0">Thành viên thứ nhất</p>
@@ -79,8 +79,14 @@
                <input class="form-control" type="text" name="Chuyên ngành 2" required>
             </div>
 
+            <div class="col-12">
+               <label for="CV" class="mb-2">File CV (.docx, .pdf, .png, .jpg, .jpeg) *</label><br/>
+               <input class="form-control" onchange="validateFileType(this)" type="file" accept=".doc, .docx, .pdf, .png, .jpg, .jpeg" id="CV" name="CV2" required>
+               <p id="invalidFile2" class="invalidFile">Chỉ hỗ trợ file có định dạng .doc, .docx hoặc .pdf</p>
+            </div>
+
             <!-- Second member -->
-            <p class="fw-bold mt-4 mb-0">Thành viên thứ hai</p>
+            <p class="fw-bold mt-5 mb-0">Thành viên thứ hai</p>
 
             <div class="col-md-5">
                <label class="form-label" for="name">Họ và tên * </label>
@@ -121,6 +127,13 @@
                <label class="form-label" for="major">Chuyên ngành *</label>
                <input class="form-control" type="text" name="Chuyên ngành 3" required>
             </div>
+
+            <div class="col-12 mb-3">
+               <label for="CV" class="mb-1">File CV (.docx hoặc .pdf) *</label><br/>
+               <input class="form-control" onchange="validateFileType(this)" type="file" accept=".doc, .docx, .pdf, .png, .jpg, .jpeg" id="CV" name="CV3" required>
+               <p id="invalidFile3" class="invalidFile">Chỉ hỗ trợ file có định dạng .doc, .docx hoặc .pdf</p>
+            </div>
+
             <!-- javascript:history.back() -->
             <div class="button-container d-flex flex-row justify-content-center mt-3">
                <a href="javascript:history.back()" class="btn btn-secondary">Quay lại</a>

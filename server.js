@@ -5,6 +5,8 @@ const database = require('./config/db');
 const http = require('http');
 const https = require('https');
 const fs = require('fs');
+const cors = require('cors');
+const multer = require('multer');
 
 const credentials = {
  ca: fs.readFileSync("./sslcert/ca_bundle.crt"),
@@ -16,6 +18,9 @@ const PORT = process.env.PORT || 8443;
 
 app.use(express.static('views'));
 app.use(bodyParser.urlencoded({extended: true}));
+
+// app.use(cors());
+
 app.set('view engine', 'pug');
 
 app.get('/', (req, res) => {

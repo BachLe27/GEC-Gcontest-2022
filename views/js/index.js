@@ -8,3 +8,4 @@ $(".bi-x-lg").click(function(){
    $(".bi-x-lg").addClass("d-none");
    $(".bi-list").removeClass("d-none");
 });
+
