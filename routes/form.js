@@ -22,7 +22,7 @@ router.get('/:formID', (req, res) => {
    }
    
    let form = app.get('form');
-   console.log(form);
+   // console.log(form);
 
    // User skip 
    if (form == undefined) res.redirect('/form');
