@@ -8,8 +8,8 @@ const fs = require('fs');
 const cors = require('cors');
 const multer = require('multer');
 
+//  ca: fs.readFileSync("./sslcert/ca_bundle.crt"),
 const credentials = {
- ca: fs.readFileSync("./sslcert/ca_bundle.crt"),
  key: fs.readFileSync("./sslcert/private.key"),
  cert: fs.readFileSync("./sslcert/certificate.crt")
 };
