@@ -10,11 +10,11 @@ const multer = require('multer');
 
 
 const credentials = {
-   // ca: fs.readFileSync("./sslcert/ca_bundle.crt"),
-   // key: fs.readFileSync("./sslcert/private.key"),
-   // cert: fs.readFileSync("./sslcert/certificate.crt")
-   key: fs.readFileSync("./sslcert/key.pem"),
-   cert: fs.readFileSync("./sslcert/cert.pem")
+   ca: fs.readFileSync("./sslcert/ca_bundle.crt"),
+   key: fs.readFileSync("./sslcert/private.key"),
+   cert: fs.readFileSync("./sslcert/certificate.crt")
+   // key: fs.readFileSync("./sslcert/key.pem"),
+   // cert: fs.readFileSync("./sslcert/cert.pem")
 };
 
 const PORT = process.env.PORT || 8443;
