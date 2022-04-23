@@ -8,6 +8,14 @@
    <link rel="stylesheet" href="../css/bootstrap.min.css">
    <link rel="stylesheet" href="../css/form.css">
    <link rel="stylesheet" href="../css/index.css">
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+   
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+
+   
 </head>
 <body>
 
@@ -27,7 +35,7 @@
       <h2 class="text-center fw-bold">Form đăng ký cuộc thi G'Contest 2022</h2>
       <hr>
       <div class="form-container container"> 
-         <h5 class="mt-4 mb-2 fw-bold">1. Thông tin của thí sinh</h5>
+         <h5 class="mt-4 mb-2 fw-bold">1. Thông tin của thí sinh/ trưởng nhóm</h5>
          <p>* Bắt buộc</p>
 
          <form action="/form/1" method="post" class="row g-3" enctype="multipart/form-data">
@@ -39,7 +47,7 @@
 
             <div class="col-md-4">
                <label class="form-label" for="gender">Giới tính *</label>
-               <select class="form-select" name="Giới tính" id="" required>
+               <select class="form-select" name="Giới tính" id="gender" required>
                   <option value="" selected disabled>Chọn giới tính</option>
                   <option value="Nam">Nam</option>
                   <option value="Nữ">Nữ</option>
@@ -63,24 +71,41 @@
             </div>
 
             <div class="col-md-12">
-               <label class="form-label" for="address">Nơi bạn đang sinh sống *</label>
-               <input class="form-control" type="text" name="Địa chỉ" required>
+               <label class="form-label" for="address">Link Facebook của bạn *</label>
+               <input class="form-control" type="url" name="Facebook" required>
             </div>
 
             <div class="col-md-6">
-               <label class="form-label" for="work">Bạn đang học/làm việc tại *</label>
-               <input class="form-control" type="text" name="Nơi học/ làm việc" required>
+               <label class="form-label" for="work">Trường đại học *</label>
+               <input class="form-control" type="text" name="Trường đại học" required>
             </div>
 
             <div class="col-md-6">
+               <label class="form-label" for="year">Sinh viên năm *</label>
+               <select class="form-select" name="Sinh viên" id="year" required>
+                  <option value="" selected disabled>Chọn năm</option>
+                  <option value="Năm 1">Năm 1</option>
+                  <option value="Năm 2">Năm 2</option>
+                  <option value="Năm 3">Năm 3</option>
+                  <option value="Năm 4">Năm 4</option>
+                  <option value="Đã ra trường">Đã ra trường</option>
+               </select>
+            </div>
+
+            <div class="col-md-12">
                <label class="form-label" for="major">Chuyên ngành *</label>
                <input class="form-control" type="text" name="Chuyên ngành" required>
             </div>
 
-            <div class="col-12">
-               <label for="CV" class="mb-1">File CV của bạn (.docx, .pdf, .png, .jpg, .jpeg) *</label><br/>
-               <input class="form-control" onchange="validateFileType(this)" type="file" accept=".doc, .docx, .pdf, .png, .jpg, .jpeg" id="CV" name="CV1" required>
-               <p id="invalidFile" class="invalidFile">Chỉ hỗ trợ file có định dạng .doc, .docx hoặc .pdf</p>
+            <div class="col-md-12">
+               <label class="form-label" for="archive">Thành tích, hoạt động nổi bật *</label>
+               <input class="form-control" type="text" name="Thành tích, hoạt động nổi bật" id="archive" required>
+            </div>
+
+            <div class="col-md-12">
+               <label for="CV" class="mb-1">File CV định dạng .pdf (Nếu có)</label><br/>
+               <input class="form-control" onchange="validateFileType(this)" type="file" accept=".pdf" id="CV" name="CV1">
+               <p id="invalidFile" class="invalidFile">Chỉ hỗ trợ file có định dạng .pdf</p>
             </div>
 
             <div class="button-container d-flex flex-row justify-content-center mt-4">

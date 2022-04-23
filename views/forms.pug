@@ -24,9 +24,12 @@ head
         tr 
           td(scope="row")= n++ 
           each val, index in form.input
-            if (index == 8 || index == 17 || index == 25)
+            if (index == 10 || index == 23 || index == 34)
               td
-                a(href=`/manager/cv/${val}`) Xem CV
+                if (val == '-')
+                  -
+                else
+                  a(href=`/manager/cv/${val}`) Xem CV
             else
               td= val
 script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js' integrity='sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p' crossorigin='anonymous')

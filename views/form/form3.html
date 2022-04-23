@@ -30,14 +30,21 @@
       <!-- form -->
       <div class="form-container container"> 
          
-         <h5 class="mt-4 mb-2 fw-bold">3. Thông tin các thành viên còn lại</h5>
+         <h5 class="mt-4 mb-2 fw-bold">2. Thông tin về nhóm</h5>
          <p>* Bắt buộc</p>
 
          <!-- Member -->
          <form action="/form/3" method="post" class="row g-3" enctype="multipart/form-data">
 
+            <div class="col-md-12">
+               <div class="form-group">
+                  <label for="team">Tên nhóm *</label>
+                  <input type="text" class="form-control" id="team" name="Tên nhóm" required>
+               </div>
+            </div>
+
             <!-- First member -->
-            <p class="fw-bold mt-4 mb-0">Thành viên thứ nhất</p>
+            <p class="fw-bold mt-4 mb-0">Thành viên thứ hai</p>
 
             <div class="col-md-5">
                <label class="form-label" for="name">Họ và tên * </label>
@@ -69,24 +76,46 @@
                <input class="form-control" type="tel" name="Số điện thoại 2" required>
             </div>
 
-            <div class="col-md-6">
-               <label class="form-label" for="work">Học/làm việc tại *</label>
-               <input class="form-control" type="text" name="Nơi học/ làm việc 2" required>
+            <div class="col-md-12">
+               <label class="form-label" for="address">Link Facebook *</label>
+               <input class="form-control" type="url" name="Facebook 2" required>
             </div>
 
             <div class="col-md-6">
+               <label class="form-label" for="work">Trường đại học *</label>
+               <input class="form-control" type="text" name="Trường đại học 2" required>
+            </div>
+
+            <div class="col-md-6">
+               <label class="form-label" for="year">Sinh viên năm *</label>
+               <select class="form-select" name="Sinh viên 2" id="year" required>
+                  <option value="" selected disabled>Chọn năm</option>
+                  <option value="Năm 1">Năm 1</option>
+                  <option value="Năm 2">Năm 2</option>
+                  <option value="Năm 3">Năm 3</option>
+                  <option value="Năm 4">Năm 4</option>
+                  <option value="Đã ra trường">Đã ra trường</option>
+               </select>
+            </div>
+
+            <div class="col-md-12">
                <label class="form-label" for="major">Chuyên ngành *</label>
-               <input class="form-control" type="text" name="Chuyên ngành 2" required>
+               <input class="form-control" type="text" name="Chuyên ngành 2" id="major" required>
             </div>
 
-            <div class="col-12">
-               <label for="CV" class="mb-2">File CV (.docx, .pdf, .png, .jpg, .jpeg) *</label><br/>
-               <input class="form-control" onchange="validateFileType(this)" type="file" accept=".doc, .docx, .pdf, .png, .jpg, .jpeg" id="CV" name="CV2" required>
-               <p id="invalidFile2" class="invalidFile">Chỉ hỗ trợ file có định dạng .doc, .docx hoặc .pdf</p>
+            <div class="col-md-12">
+               <label class="form-label" for="archive">Thành tích, hoạt động nổi bật *</label>
+               <input class="form-control" type="text" name="Thành tích, hoạt động nổi bật 2" id="archive" required>
+            </div>
+
+            <div class="col-md-12">
+               <label for="CV" class="mb-1">File CV định dạng .pdf (Nếu có)</label><br/>
+               <input class="form-control" onchange="validateFileType(this)" type="file" accept=".pdf" id="CV" name="CV2">
+               <p id="invalidFile" class="invalidFile">Chỉ hỗ trợ file có định dạng .pdf</p>
             </div>
 
             <!-- Second member -->
-            <p class="fw-bold mt-5 mb-0">Thành viên thứ hai</p>
+            <p class="fw-bold mt-5 mb-0">Thành viên thứ ba</p>
 
             <div class="col-md-5">
                <label class="form-label" for="name">Họ và tên * </label>
@@ -118,20 +147,42 @@
                <input class="form-control" type="tel" name="Số điện thoại 3" required>
             </div>
 
-            <div class="col-md-6">
-               <label class="form-label" for="work">Học/làm việc tại *</label>
-               <input class="form-control" type="text" name="Nơi học/ làm việc 3" required>
+            <div class="col-md-12">
+               <label class="form-label" for="address">Link Facebook *</label>
+               <input class="form-control" type="url" name="Facebook 3" required>
             </div>
 
             <div class="col-md-6">
+               <label class="form-label" for="work">Trường đại học *</label>
+               <input class="form-control" type="text" name="Trường đại học 3" required>
+            </div>
+
+            <div class="col-md-6">
+               <label class="form-label" for="year">Sinh viên năm *</label>
+               <select class="form-select" name="Sinh viên 3" id="year" required>
+                  <option value="" selected disabled>Chọn năm</option>
+                  <option value="Năm 1">Năm 1</option>
+                  <option value="Năm 2">Năm 2</option>
+                  <option value="Năm 3">Năm 3</option>
+                  <option value="Năm 4">Năm 4</option>
+                  <option value="Đã ra trường">Đã ra trường</option>
+               </select>
+            </div>
+
+            <div class="col-md-12">
                <label class="form-label" for="major">Chuyên ngành *</label>
-               <input class="form-control" type="text" name="Chuyên ngành 3" required>
+               <input class="form-control" type="text" name="Chuyên ngành 3" id="major" required>
             </div>
 
-            <div class="col-12 mb-3">
-               <label for="CV" class="mb-1">File CV (.docx hoặc .pdf) *</label><br/>
-               <input class="form-control" onchange="validateFileType(this)" type="file" accept=".doc, .docx, .pdf, .png, .jpg, .jpeg" id="CV" name="CV3" required>
-               <p id="invalidFile3" class="invalidFile">Chỉ hỗ trợ file có định dạng .doc, .docx hoặc .pdf</p>
+            <div class="col-md-12">
+               <label class="form-label" for="archive">Thành tích, hoạt động nổi bật *</label>
+               <input class="form-control" type="text" name="Thành tích, hoạt động nổi bật 3" id="archive" required>
+            </div>
+
+            <div class="col-md-12">
+               <label for="CV" class="mb-1">File CV định dạng .pdf (Nếu có)</label><br/>
+               <input class="form-control" onchange="validateFileType(this)" type="file" accept=".pdf" id="CV" name="CV3">
+               <p id="invalidFile" class="invalidFile">Chỉ hỗ trợ file có định dạng .pdf</p>
             </div>
 
             <!-- javascript:history.back() -->

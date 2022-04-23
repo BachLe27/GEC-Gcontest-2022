@@ -22,7 +22,7 @@ router.get('/:formID', (req, res) => {
    }
    
    let form = app.get('form');
-   // console.log(form);
+   console.log(form);
 
    // User skip 
    if (form == undefined) res.redirect('/form');
@@ -44,9 +44,14 @@ router.post('/1', upload.single('CV1'), (req, res) => {
       }
    }
    // console.log(file);
-   form.field.push('CV1');
-   form.input.push(file.path);
-   
+   if (file != undefined) {
+      form.field.push('CV1');
+      form.input.push(file.path);
+   } else {
+      form.field.push('CV1');
+      form.input.push('-');
+   }
+
    app.set('form', form);
 
    res.redirect('/form/2');
@@ -93,13 +98,11 @@ router.post('/3',
       const files = req.files;
       // console.log(files['CV2']);
       // res.send('oke');
-   let firstCVIndex = 8;
-   let secondCVIndex = 15;
+   let firstCVIndex = 12;
+   let secondCVIndex = 22;
 
    let form = app.get('form'), cnt = 1;
    if (form == undefined) res.redirect('/form');
-
-   let file = req.file;
 
    for (let x in req.body) {
       cnt++;
@@ -110,15 +113,22 @@ router.post('/3',
          form.input.push(req.body[x]);
       }
 
-      let link = "https://gecftu.com/manager/cv/uploads/";
       if (cnt == firstCVIndex) {
          form.field.push('CV2');
-         form.input.push(files['CV2'][0].path);
+         if (files['CV2'] != undefined) {
+            form.input.push(files['CV2'][0].path); 
+         } else {
+            form.input.push('-');
+         }
       }
 
       if (cnt == secondCVIndex) {
          form.field.push('CV3');
-         form.input.push(files['CV3'][0].path);
+         if (files['CV3'] != undefined) {
+            form.input.push(files['CV3'][0].path); 
+         } else {
+            form.input.push('-');
+         }
       }
    }
 

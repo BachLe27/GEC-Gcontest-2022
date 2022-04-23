@@ -1,7 +1,7 @@
 function validateFileType(input) {
    
    let filename = input.value;
-   if (filename.toLowerCase().match(/\.(doc|docx|pdf|png|jpg|jpeg)$/i)) {
+   if (filename.toLowerCase().match(/\.(pdf)$/i)) {
       document.getElementById('invalidFile').style.display = 'none';
       // console.log('valid');
    } else {
@@ -10,3 +10,7 @@ function validateFileType(input) {
       input.value = '';
    }
 }
+
+$('.datepicker').datepicker({
+   format: 'dd/mm/yyyy'
+});

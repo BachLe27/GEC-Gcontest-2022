@@ -76,17 +76,17 @@ router.get('/cv/uploads/:cvFile', (req, res) => {
       res.send('Not Found!');
    }
 
-   if (cvFile.includes('.docx') || cvFile.includes('.doc')) { 
-      let url = path.join(__dirname, '../uploads/cv/' + cvFile);
-      res.send(`<iframe src='https://view.officeapps.live.com/op/embed.aspx?src=${url}' width='1366px' height='623px' frameborder='0'></iframe>`);
-   }
+   // if (cvFile.includes('.docx') || cvFile.includes('.doc')) { 
+   //    let url = path.join(__dirname, '../uploads/cv/' + cvFile);
+   //    res.send(`<iframe src='https://view.officeapps.live.com/op/embed.aspx?src=${url}' width='1366px' height='623px' frameborder='0'></iframe>`);
+   // }
    // console.log(cvID);
    res.sendFile(`${cvFile}`, {root: path.join(__dirname, '../uploads')});
 })
 
 router.post('/export', (req, res) => {
    
-   let cvIndex = [8, 16, 24];
+   let cvIndex = [10, 23, 34];
 
    let formList = []
    Form.find({}, (err, forms) => {
@@ -96,7 +96,7 @@ router.post('/export', (req, res) => {
       forms.forEach(form => {
          for (let i = 0; i < cvIndex.length; i++) { 
             if (form.input[cvIndex[i]] != null) { 
-               form.input[i] = 'https://gecftu.com/manager/cv/uploads/' + form.input[i];
+               form.input[cvIndex[i]] = 'https://gecftu.com/manager/cv/' + form.input[cvIndex[i]];
             }
          }
          formList.push(form.input);
