@@ -8,12 +8,11 @@ const fs = require('fs');
 const cors = require('cors');
 const multer = require('multer');
 
-//  ca: fs.readFileSync("./sslcert/ca_bundle.crt"),
-//  key = fs.readFileSync("./sslcert/private.key"),
-// cert = fs.readFileSync("./sslcert/certificate.crt"),
+
 const credentials = {
- key: fs.readFileSync("./sslcert/private.pem"),
- cert: fs.readFileSync("./sslcert/cert.pem")
+   ca: fs.readFileSync("./sslcert/ca_bundle.crt"),
+   key: fs.readFileSync("./sslcert/private.key"),
+   cert: fs.readFileSync("./sslcert/certificate.crt")
 };
 
 const PORT = process.env.PORT || 8443;
