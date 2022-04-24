@@ -31,6 +31,10 @@ app.get('/', (req, res) => {
    res.sendFile(__dirname + '/views/index.html');
 })
 
+app.get('/.well-known/pki-validation/F082332B68071CC0ADBE0C2F37D461A2.txt', (req, res) => { 
+   res.sendFile(__dirname + '/sslcert/F082332B68071CC0ADBE0C2F37D461A2.txt');
+})
+
 
 app.get('/test', (req, res) => {
    res.sendFile(__dirname + '/views/test.html');
