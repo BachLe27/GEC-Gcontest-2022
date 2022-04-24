@@ -18,7 +18,7 @@ const credentials = {
    // cert: fs.readFileSync("./sslcert/cert.pem")
 };
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8443;
 
 app.use(express.static('views'));
 app.use(bodyParser.urlencoded({extended: true}));
@@ -31,9 +31,9 @@ app.get('/', (req, res) => {
    res.sendFile(__dirname + '/views/index.html');
 })
 
-app.get('/.well-known/pki-validation/F082332B68071CC0ADBE0C2F37D461A2.txt', (req, res) => { 
-   res.sendFile(__dirname + '/sslcert/F082332B68071CC0ADBE0C2F37D461A2.txt');
-})
+// app.get('/.well-known/pki-validation/F082332B68071CC0ADBE0C2F37D461A2.txt', (req, res) => { 
+//    res.sendFile(__dirname + '/sslcert/F082332B68071CC0ADBE0C2F37D461A2.txt');
+// })
 
 
 app.get('/test', (req, res) => {
@@ -57,6 +57,6 @@ httpServer.listen(8080, () => {
    console.log('HTTP Server running on port 8080');
 });
 
-// httpsServer.listen(8443, () => {
-//    console.log('HTTPS Server running on port 8443');
-// });
+httpsServer.listen(8443, () => {
+   console.log('HTTPS Server running on port 8443');
+});
