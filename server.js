@@ -18,7 +18,7 @@ const credentials = {
    // cert: fs.readFileSync("./sslcert/cert.pem")
 };
 
-const PORT = process.env.PORT || 8443;
+const PORT = process.env.PORT || 8080;
 
 app.use(express.static('views'));
 app.use(bodyParser.urlencoded({extended: true}));
@@ -57,6 +57,6 @@ httpServer.listen(8080, () => {
    console.log('HTTP Server running on port 8080');
 });
 
-httpsServer.listen(8443, () => {
-   console.log('HTTPS Server running on port 8443');
-});
+// httpsServer.listen(8443, () => {
+//    console.log('HTTPS Server running on port 8443');
+// });
