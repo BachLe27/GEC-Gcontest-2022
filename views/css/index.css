@@ -76,7 +76,7 @@ a.navbar-brand {
 
 .page-header {
    margin-top: 3rem;
-   background: url("../assets/img/BG-02.png") center center/cover no-repeat;
+   background: url("../assets/img/BG-02.jpg") center center/cover no-repeat;
    background-color: rgba(3, 4, 94, 0.6);
    background-blend-mode: soft-light;
    /* background-image: url('../assets/img/Cover.png');
@@ -395,7 +395,7 @@ a.navbar-brand {
 .contact {
    min-height: 50vh;
    /* background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(37,145,251,0.98) 0.1%, rgba(0,7,128,1) 99.8% ); */
-   background: linear-gradient(rgba(5,8,114,0.7), rgba(7,3,53,0.5)), url('../assets/img/bg-1.png') right top fixed;
+   background: linear-gradient(rgba(5,8,114,0.7), rgba(7,3,53,0.5)), url('../assets/img/bg-1.jpg') right top fixed;
    color: #fff;
    position: relative;
    text-shadow: 2px 2px #000;
