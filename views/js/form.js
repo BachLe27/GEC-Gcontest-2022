@@ -11,6 +11,3 @@ function validateFileType(input) {
    }
 }
 
-$('.datepicker').datepicker({
-   format: 'dd/mm/yyyy'
-});
