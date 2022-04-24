@@ -28,9 +28,9 @@ html,body {
    background-color: #a51616;
 }
 
-#rewards {
+/* #rewards {
    background-color: rgb(13, 22, 99);
-}
+} */
 
 #partners {
    background-color: rgb(255, 255, 255);
@@ -76,13 +76,9 @@ a.navbar-brand {
 
 .page-header {
    margin-top: 3rem;
-   background: url("../assets/img/BG-02.jpg") center center/cover no-repeat;
-   background-color: rgba(3, 4, 94, 0.6);
-   background-blend-mode: soft-light;
-   /* background-image: url('../assets/img/Cover.png');
-   background-position: center;
-   background-repeat: no-repeat;
-   background-size: cover; */
+   background: url("../assets/img/BG-02.jpg") center top/cover no-repeat;
+   /* background-color: rgba(3, 4, 94, 0.6);
+   background-blend-mode: soft-light; */
 }
 
 .page-header {
@@ -105,20 +101,23 @@ a.navbar-brand {
    font-size: 5rem;
    font-weight: bold;
    color: #fff;
-   /* text-shadow: -1px 15px 15px rgba(3, 4, 94, 1); */
    text-shadow: -1px 5px 2px #03045E;
    text-transform: uppercase;
 }
 
+.page__header__background {
+   width: 55%;
+}
+
 @media screen and (max-width: 992px) {
-   .page-header__left__text__title {
-      font-size: 3.5rem;
+   .page__header__background {
+      width: 90%;
    }
 }
 
-@media screen and (max-width: 320px) {
-   .page-header__left__text__title {
-      font-size: 3rem;
+@media screen and (max-width: 400px) {
+   .page__header__background {
+      width: 100%;
    }
 }
 
@@ -134,6 +133,9 @@ a.navbar-brand {
    font-size: 1.2rem;
    border-width: 2px;
 }
+
+
+
 
 /* .page-header__left__button:hover {
    background-color: #023B6B;
@@ -161,10 +163,16 @@ a.navbar-brand {
 
 .intro h1 {
    font-weight: bold;
+   text-shadow: #00daf7 0px 0px 10px;
+   font-size: 3em;
 }
 
 .about__gcontest__left p {
    text-align: justify;
+}
+
+.about__image {
+   width: 90%;
 }
 
 
@@ -359,30 +367,88 @@ a.navbar-brand {
 
 
 /* --------Rewards-------- */
+.rewards {
+   background-color: rgb(190, 190, 190);
+   background: url("../assets/img/BG-02.jpg") center top/cover no-repeat;
+   background-color: rgba(3, 4, 94, 0.6);
+   background-blend-mode: soft-light;
+   color: #ffffff;
+}
 
+
+.rewards .line {
+   border-color: #fff;
+}
+
+.rewards__item {
+   padding: 1.5rem;
+   margin-bottom: 1rem;
+   /* background-color: #fff; */
+   border-radius: 4px;
+   box-shadow: 0px 0px 10px rgba(0,0,0,0.7);
+}
+
+.rewards__item h1 {
+   color: #fff;
+   /* color: #00daf7; */
+   font-weight: bold;
+   text-shadow: rgba(255, 255, 255, 0.5) 0px 0px 10px;
+}
+
+.rewards__item p {
+   margin: 0!important;
+   /* font-weight: bold; */
+}
 
 /* --------Partner--------*/
 .partners {
    min-height: 100vh;
 }
 
-.parter__item {
+.partner__item {
    min-height: 30vh;
+   color: #03045E;
 }
 
+.partner__img__1{
+   width: 400px;
+}
+
+.partner__img__2{
+   width: 400px;
+}
+
+.partner__img__4 {
+   width: 350px;
+}
+
+.partner__img__5 {
+   width: 300px;
+}
+
+.partner__img__6 {
+   width: 250px;
+}
+
+.partner__img__7 {
+   width: 300px;
+}
+
+@media screen and (max-width: 400px) {
+   .partner__img__1, .partner__img__2, .partner__img__3, .partner__img__4, .partner__img__5, 
+   .partner__img__6, .partner__img__7 {
+      width: 100%;
+   }
+}
 
 
 /* --------About--------*/
 .about {
    /* linear-gradient(rgba(5,8,114,0.7), rgba(7,3,53,0.8) */
    /* linear-gradient(rgba(3, 5, 94, 0.5), rgba(21, 0, 141, 0.6)) */
-   background: linear-gradient(rgba(5,8,114,0.7), rgba(7,3,53,0.8)), url('../assets/img/bg.jpg') center center/cover;
+   background: linear-gradient(rgba(5,8,114,0.7), rgba(7,3,53,0.8)), url('../assets/img/BG-02.jpg') center center/cover;
    min-height: 60vh;
    color: #fff;
-}
-
-.about__desc {
-
 }
 
 .about button {
