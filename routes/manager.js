@@ -53,6 +53,20 @@ router.post('/',[
                forms.forEach(form => {
                   formList.push(form);
                });
+
+               // console.log(formList);
+               // Xử lý đầu ra
+               formList.forEach(form => {    
+                  for (let i = 0; i < form.field.length; i++) {
+                     // console.log(form.field[i]);
+                  //    // Ngày sinh
+                     if (form.field[i].includes('Ngày sinh')) {
+                        form.input[i] = moment(form.input[i]).format('DD/MM/YYYY');
+                        // console.log(form.input[i]);
+                     }
+                  }
+               })
+
                // console.log(formList);
                res.render('forms', {
                   formList: formList
@@ -76,11 +90,6 @@ router.get('/cv/uploads/:cvFile', (req, res) => {
       res.send('Not Found!');
    }
 
-   // if (cvFile.includes('.docx') || cvFile.includes('.doc')) { 
-   //    let url = path.join(__dirname, '../uploads/cv/' + cvFile);
-   //    res.send(`<iframe src='https://view.officeapps.live.com/op/embed.aspx?src=${url}' width='1366px' height='623px' frameborder='0'></iframe>`);
-   // }
-   // console.log(cvID);
    res.sendFile(`${cvFile}`, {root: path.join(__dirname, '../uploads')});
 })
 
@@ -94,11 +103,21 @@ router.post('/export', (req, res) => {
       formList.push(forms[0].field);
 
       forms.forEach(form => {
-         for (let i = 0; i < cvIndex.length; i++) { 
-            if (form.input[cvIndex[i]] != null) { 
-               form.input[cvIndex[i]] = 'https://gecftu.com/manager/cv/' + form.input[cvIndex[i]];
+
+         for (let i = 0; i < form.field.length; i++) 
+         { 
+            if (form.field[i].includes('Ngày sinh')) 
+            {
+               form.input[i] = moment(form.input[i]).format('DD/MM/YYYY');
+            }
+
+            if (form.field[i].includes('CV')) 
+            {
+               if (form.input[i] != '-') 
+                  form.input[i] = 'https://gcontest2022.gecftu.com/manager/cv/' + form.input[i];
             }
          }
+         
          formList.push(form.input);
       })
       

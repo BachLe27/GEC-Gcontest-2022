@@ -30,7 +30,9 @@ h2, h5 {
 
 /* Table */
 thead, td, th {
-   min-width: 10vw !important;
+   min-width: 7vw !important;
+   max-width: 25vw !important;
+   overflow-wrap: break-word;
 }
 
 .invalidFile {
