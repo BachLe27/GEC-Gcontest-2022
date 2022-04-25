@@ -167,7 +167,7 @@ a.navbar-brand {
    font-family: var(--second-font);
    font-weight: bold;
    text-shadow: #00daf7 0px 0px 10px;
-   font-size: 3em;
+   font-size: 3rem;
 }
 
 .about__gcontest__left p {
@@ -394,9 +394,9 @@ a.navbar-brand {
    font-family: var(--second-font);
 }
 
-/* .rewards__item h2 {
-   font-family: var(--second-font);
-} */
+.rewards__item h2 {
+   /* font-family: var(--second-font); */
+}
 
 .rewards__item h1 {
    color: #fff;
@@ -442,9 +442,9 @@ a.navbar-brand {
 }
 
 /* Nhà tài trợ bạc */
-/* .partner__img__3 {
+.partner__img__3 {
    
-} */
+}
 
 /* Nhà tài trợ đồng */
 .partner__img__4 {
@@ -481,11 +481,11 @@ a.navbar-brand {
    }
 
    .partner__img__4 {
-      width: 50%;
+      width: 55%;
    }
 
    .partner__img__6 {
-      width: 55%;
+      width: 60%;
    }
 }
 
@@ -584,12 +584,13 @@ a.navbar-brand {
 
 @media screen and (max-width: 768px) {
    .contact__title {
-      font-size: 2rem !important;
+      font-size: 1.7rem !important;
    }
 
-   /* .contact__logo {
-      width: 20%;
-   } */
+   .contact__logo {
+      width: 50px;
+      height: 50px;
+   }
 
    .social p {
       font-size: 0.9rem;
