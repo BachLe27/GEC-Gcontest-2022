@@ -2,8 +2,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 
+
+@font-face {
+   font-family: 'Quaranta Bold';
+   src: URL('../assets/fonts/Qaranta\ Bold.otf') format('truetype');
+}
+
 :root {
    --main-font: 'Montserrat', sans-serif;
+   --second-font: 'Quaranta Bold', sans-serif;
 }
 
 * {
@@ -20,17 +27,9 @@ html,body {
    padding:0;
 }
 
-#page-header, #rule, #rewards {
+#page-header {
    min-height: 100vh;
 }
-
-#rule {
-   background-color: #a51616;
-}
-
-/* #rewards {
-   background-color: rgb(13, 22, 99);
-} */
 
 #partners {
    background-color: rgb(255, 255, 255);
@@ -41,12 +40,15 @@ html,body {
 
 /* Navbar */
 .navbar {
-   background-color: #001942;
+   background-color: #012a46;
+   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 a.navbar-brand {
    color: #fff;
    font-size: 1.5rem;
+   font-weight: bold;
+   font-family: Quaranta Bold;
 }
 
 .bi-list{
@@ -162,6 +164,7 @@ a.navbar-brand {
 }
 
 .intro h1 {
+   font-family: var(--second-font);
    font-weight: bold;
    text-shadow: #00daf7 0px 0px 10px;
    font-size: 3em;
@@ -187,16 +190,14 @@ a.navbar-brand {
    color: #000;
 }
 
-.timeline p {
-   /* margin: 0.5rem; */
-}
 
 .timeline h4 {
    /* margin: 0rem; */
    color: #03045E;
 }
 
-.timeline__title {
+.timeline__title h1 {
+   font-family: var(--second-font);
    color: #03045E;
 }
 
@@ -373,6 +374,7 @@ a.navbar-brand {
    background-color: rgba(3, 4, 94, 0.6);
    background-blend-mode: soft-light;
    color: #ffffff;
+   min-height: 100vh;
 }
 
 
@@ -388,8 +390,17 @@ a.navbar-brand {
    box-shadow: 0px 0px 10px rgba(0,0,0,0.7);
 }
 
+.rewards__title {
+   font-family: var(--second-font);
+}
+
+/* .rewards__item h2 {
+   font-family: var(--second-font);
+} */
+
 .rewards__item h1 {
    color: #fff;
+   /* font-family: var(--second-font); */
    /* color: #00daf7; */
    font-weight: bold;
    text-shadow: rgba(255, 255, 255, 0.5) 0px 0px 10px;
@@ -405,39 +416,76 @@ a.navbar-brand {
    min-height: 100vh;
 }
 
+.partners__title {
+   color: #03045E;
+   font-family: var(--second-font);
+}
+
 .partner__item {
    min-height: 30vh;
    color: #03045E;
 }
 
-.partner__img__1{
+.partner__item h5 {
+   text-transform: uppercase;
+}
+
+/* Ban Tổ chức */
+.partner__img__1 {
    width: 400px;
 }
 
+
+/* Nhà bảo trợ chuyên môn */
 .partner__img__2{
-   width: 400px;
+   width: 250px;
 }
 
+/* Nhà tài trợ bạc */
+/* .partner__img__3 {
+   
+} */
+
+/* Nhà tài trợ đồng */
 .partner__img__4 {
-   width: 350px;
+   width: 280px;
 }
 
+/* Nhà tài trợ đồng hành */
 .partner__img__5 {
    width: 300px;
 }
 
+/* Bảo trợ truyền thông */
 .partner__img__6 {
    width: 250px;
 }
 
+/* Tài trợ hiện vật */
 .partner__img__7 {
    width: 300px;
 }
 
-@media screen and (max-width: 400px) {
-   .partner__img__1, .partner__img__2, .partner__img__3, .partner__img__4, .partner__img__5, 
-   .partner__img__6, .partner__img__7 {
-      width: 100%;
+@media screen and (max-width: 500px) {
+   .partner__img__1,  .partner__img__5, 
+   .partner__img__7 {
+      width: 80%;
+   }
+
+   .partner__img__2 {
+      width: 50%;
+   }
+
+   .partner__img__3 {
+      width: 80%;
+   }
+
+   .partner__img__4 {
+      width: 50%;
+   }
+
+   .partner__img__6 {
+      width: 55%;
    }
 }
 
@@ -449,6 +497,10 @@ a.navbar-brand {
    background: linear-gradient(rgba(5,8,114,0.7), rgba(7,3,53,0.8)), url('../assets/img/BG-02.jpg') center center/cover;
    min-height: 60vh;
    color: #fff;
+}
+
+.about__title {
+   font-family: var(--second-font);
 }
 
 .about button {
@@ -486,6 +538,7 @@ a.navbar-brand {
 .contact h5 {
    color: #ffffff;
    margin-bottom: 1rem;
+   /* font-family: var(--second-font); */
 }
 
 .contact p {
@@ -509,20 +562,24 @@ a.navbar-brand {
    font-size: 1.8rem;
 }
 
-.contact__title {
-   font-size: 3rem !important;
-   color: #ffffff;
-}
+
 
 .contact .line {
    width: 340px;
    border-bottom: #ffffff 3px solid;
 }
 
+.contact__title {
+   font-family: var(--second-font);
+   font-size: 3rem !important;
+   color: #ffffff;
+}
+
 .contact__logo {
-   width: 15%;
-   height: auto;
-   object-fit: contain;
+   width: 64px;
+   height: 64px;
+   /* height: auto; */
+   /* object-fit: contain; */
 }
 
 @media screen and (max-width: 768px) {
@@ -530,9 +587,9 @@ a.navbar-brand {
       font-size: 2rem !important;
    }
 
-   .contact__logo {
+   /* .contact__logo {
       width: 20%;
-   }
+   } */
 
    .social p {
       font-size: 0.9rem;

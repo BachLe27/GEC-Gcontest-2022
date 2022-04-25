@@ -74,16 +74,9 @@
    <!-- Page Header -->
    <header id="page-header">
       <div class="page-header d-flex flex-nowrap align-items-center justify-content-center">
-
-      <!-- <div class="vertical-line d-none d-md-none order-0" data-aos="fade-right" data-aos-duration="1200"></div> -->
-
          <div class="page-header__left d-flex order-1 " data-aos="fade-down" data-aos-duration="1200">
 
-            <!-- <div class="vertical-line h-100 d-md-none"></div> -->
-
             <div class="page-header__left__text text-center">
-               <!-- <h1 class="page-header__left__text__title">G'Contest</h1>
-               <p class="fw-bold">NHÀ KINH TẾ TÀI BA 2022</p> -->
                
                <img class="page__header__background" src="./assets/img/text1.png" alt="background">
 
@@ -93,11 +86,6 @@
                
             </div>
          </div>
-
-         <!-- <div class="page-header__right order-md-2 order-0 col-md-6" data-aos="fade-down" data-aos-duration="700" >
-            <img class="img-fluid" src="./assets/img/20-650x400.jpg" alt="">
-         </div> -->
-      
       </div>
    </header>
    <!-- End Page Header -->
@@ -105,7 +93,6 @@
    <div id="intro"></div>
    <!-- About: General infomation about contest-->
    <section class="intro d-flex flex-column align-items-center justify-content-center py-4">
-      <!-- <div class="overlay"></div> -->
       <!-- GContest -->
       <div class="about__gcontest d-flex flex-md-row flex-column container align-items-center justify-content-center">
 
@@ -114,7 +101,7 @@
             <!-- <div class="d-flex w-100 justify-content-center mb-4">
                <img class="about__image" src="./assets/img/Gcontest2022.png" alt="Gcontest2022">
             </div> -->
-            <h1 class="text-start text-md-end ms-md-0 text-center">G’Contest 2022</h1>
+            <h1 class="text-center">G’Contest 2022</h1>
             <p>Khởi đầu từ năm 2016, trải qua 3 mùa thi, G'Contest đã tạo nên những thành công vô cùng vang dội. Với sứ mệnh tạo ra một sân chơi trí tuệ chuyên nghiệp và uy tín, cùng với đó giúp các bạn sinh viên có cơ hội ứng dụng những kiến thức về kinh tế vào thực tế doanh nghiệp. </p>
 
             <p>
@@ -135,9 +122,6 @@
 
       <div class="timeline__title d-flex justify-content-center flex-column align-items-center">
          <h1 class="fw-bold text-center">Thể lệ cuộc thi</h1>
-         <!-- <div class="d-flex justify-content-center">
-            <img class="w-50" src="./assets/img/Thể lệ.png" alt="Thể lệ">
-         </div> -->
          <div class="w-25 line"></div>
       </div>
 
@@ -206,19 +190,20 @@
          </div>
          
       </div>
-      
+      <div id="rewards"></div>
    </section>
 
 
    <!-- Rewards -->
-   <section id="rewards" class="rewards py-5">
+   <section  class="rewards py-5">
+
       <div class="container">
          <div class="d-flex flex-column align-items-center justify-content-center">
-            <h1 class="fw-bold text-center">Cơ cấu giải thưởng</h1>
+            <h1 class="fw-bold text-center rewards__title">Cơ cấu giải thưởng</h1>
             <div class="w-25 line"></div>
          </div>
          
-         <div class="rewards__row w-100 d-flex justify-content-center">
+         <div class="rewards__row w-100 d-flex justify-content-center" data-aos="fade-up" data-aos-duration="1800">
             <div class="rewards__item d-flex flex-column justify-content-center align-items-center mt-5">
                <h2 class="fw-bold">01 Giải Nhất</h2>
                <h1 class="">30.000.000 VND</h1>
@@ -232,9 +217,9 @@
             </div>
          </div>
          
-         <div class="reward__row w-100 d-flex justify-content-between flex-lg-row flex-column ">
+         <div class="reward__row w-100 d-flex justify-content-between flex-lg-row flex-column" data-aos="fade-up" data-aos-duration="1800" data-aos-offset="300">
 
-            <div class="rewards__item d-flex flex-column justify-content-center align-items-center mt-5">
+            <div class="rewards__item d-flex flex-column justify-content-center align-items-center mt-5" >
                <h2 class="fw-bold">01 Giải Nhì</h2>
                <h1 class="">23.000.000 VND</h1>
                <div class="text-center">
@@ -259,15 +244,18 @@
       
       
 
-      
+      <div id="partners"></div>
    </section>
 
-   <div id="partners"></div>
+   <!-- <div id="partners"></div> -->
 
    <!-- Partners -->
    <section class="partners py-5 text-center">
       <!-- <div id="contact-mark"></div> -->
-      <h1 class="fw-bold text-center mb-5">Đơn vị đồng hành</h1>
+      <div class="d-flex align-items-center justify-content-center flex-column mb-5">
+         <h1 class="fw-bold text-center partners__title">Đơn vị đồng hành</h1>
+         <div class="line w-25"></div>
+      </div>
 
       <div class="partner__item">
          <h5 class="fw-bold">Ban tổ chức</h5>
@@ -290,16 +278,15 @@
       </div>
 
       <div class="d-flex justify-content-center flex-md-row flex-column">
-         <div class="partner__item">
+         <div class="partner__item mx-5">
             <h5 class="fw-bold">Nhà tài trợ đồng hành</h5>
             <img class="partner__img__5" src="./assets/img/NTT Đồng Hành.png" alt="Nhà tài trợ Đồng">
          </div>
 
-         <div class="partner__item">
+         <div class="partner__item mx-5">
             <h5 class="fw-bold">Bảo trợ truyền thông</h5>
             <img class="partner__img__6" src="./assets/img/Bảo trợ truyền thông.png" alt="">
          </div>
-         
       </div>
       
       <div class="partner__item">
@@ -315,8 +302,8 @@
    <section class="about py-5 d-flex align-items-center" loading="lazy">
       
       <div class="container d-flex flex-column px-5">
-         <div class="about__title mb-3">
-            <h2 class="fw-bold">Về chúng tôi</h2>
+         <div class="mb-3">
+            <h2 class="fw-bold about__title">Về chúng tôi</h2>
          </div>
 
          <div class="about__desc col-lg-6">
@@ -338,7 +325,7 @@
       <div class="container d-flex flex-column justify-content-center align-items-lg-start align-items-center">
 
          <div class="ps-lg-3 d-flex flex-row">
-            <img class="me-2 contact__logo" src="./assets/img/GEC Logo - white.png" alt="">
+            <img class="me-2 contact__logo img-fluid" src="./assets/img/GEC Logo - white.png" alt="GEC Logo">
             <h1 class="contact__title fw-bold p-0 mt-2">CONTACT US </h1>
             <!-- <h1 class="contact__title fw-bold">CONTACT US</h1> -->
          </div>
