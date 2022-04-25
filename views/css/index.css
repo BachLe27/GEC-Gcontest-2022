@@ -1,11 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed:wght@700&display=swap');
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 
 
 @font-face {
    font-family: 'Quaranta Bold';
    src: URL('../assets/fonts/Qaranta\ Bold.otf') format('truetype');
+}
+
+@font-face {
+   font-family: 'Montserrat-Regular';
+   src: url('../assets/fonts/Montserrat-Regular.ttf') format('truetype');
+}
+
+@font-face {
+   font-family: 'Montserrat-Bold';
+   src: url(../assets/fonts/Montserrat-Bold.ttf) format('truetype');
 }
 
 :root {
@@ -16,6 +25,11 @@
 * {
    box-sizing: border-box;
    font-family: var(--main-font);
+}
+
+.fw-bold {
+   font-family: 'Montserrat-Bold';
+   font-weight: bold;
 }
 
 .nav-link:hover{
@@ -115,11 +129,20 @@ a.navbar-brand {
    .page__header__background {
       width: 90%;
    }
+   
 }
 
 @media screen and (max-width: 400px) {
    .page__header__background {
       width: 100%;
+   }
+
+   #page-header {
+      min-height: 90vh !important;
+   }
+
+   .page-header {
+      height: 90vh;
    }
 }
 
@@ -572,7 +595,6 @@ a.navbar-brand {
 .social p i {
    font-size: 1.8rem;
 }
-
 
 
 .contact .line {
