@@ -30,7 +30,7 @@ h2, h5 {
 
 /* Table */
 thead, td, th {
-   min-width: 7vw !important;
+   min-width: 15vw !important;
    height: max-content;
 }
 
