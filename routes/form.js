@@ -27,7 +27,9 @@ router.get('/:formID', (req, res) => {
    // User skip 
    if (form == undefined) res.redirect('/form');
 
+   
    res.sendFile(`form${req.params.formID}.html`, {root: path.join(__dirname, '../views/form')});
+
 })
 
 
