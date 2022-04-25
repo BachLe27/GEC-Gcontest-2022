@@ -438,7 +438,7 @@ a.navbar-brand {
 
 /* Nhà bảo trợ chuyên môn */
 .partner__img__2{
-   width: 250px;
+   width: 320px;
 }
 
 /* Nhà tài trợ bạc */
@@ -495,6 +495,8 @@ a.navbar-brand {
    /* linear-gradient(rgba(5,8,114,0.7), rgba(7,3,53,0.8) */
    /* linear-gradient(rgba(3, 5, 94, 0.5), rgba(21, 0, 141, 0.6)) */
    background: linear-gradient(rgba(5,8,114,0.7), rgba(7,3,53,0.8)), url('../assets/img/BG-02.jpg') center center/cover;
+   /* background-color: rgba(3, 4, 94, 0.6);
+   background-blend-mode: soft-light; */
    min-height: 60vh;
    color: #fff;
 }
@@ -514,19 +516,21 @@ a.navbar-brand {
    min-height: 50vh;
    /* background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(37,145,251,0.98) 0.1%, rgba(0,7,128,1) 99.8% ); */
    background: linear-gradient(rgba(5,8,114,0.7), rgba(7,3,53,0.5)), url('../assets/img/bg-1.jpg') right top fixed;
+   background-color: rgba(0, 0, 0, 0.5);
+   background-blend-mode: soft-light;
    color: #fff;
    position: relative;
    text-shadow: 2px 2px #000;
 }
 
-.contact .overlay {
+/* .contact .overlay {
    background-color: rgba(0, 0, 0, 0.288);
    width: 100%;
    height: 100%;
    position: absolute;
    top: 0;
    z-index: 0;
-}
+} */
 
 
 .contact .container {
