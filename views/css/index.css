@@ -432,7 +432,7 @@ a.navbar-brand {
 
 /* Ban Tổ chức */
 .partner__img__1 {
-   width: 400px;
+   width: 450px;
 }
 
 
@@ -443,33 +443,40 @@ a.navbar-brand {
 
 /* Nhà tài trợ bạc */
 .partner__img__3 {
-   
+   width: 350px;
 }
 
 /* Nhà tài trợ đồng */
 .partner__img__4 {
-   width: 280px;
+   width: 200px;
 }
 
 /* Nhà tài trợ đồng hành */
 .partner__img__5 {
-   width: 300px;
+   width: 250px;
 }
 
 /* Bảo trợ truyền thông */
 .partner__img__6 {
-   width: 250px;
+   width: 220px;
 }
 
 /* Tài trợ hiện vật */
 .partner__img__7 {
-   width: 300px;
+   width: 350px;
 }
 
 @media screen and (max-width: 500px) {
-   .partner__img__1,  .partner__img__5, 
-   .partner__img__7 {
+
+   .partner__img__1 {
       width: 80%;
+   }
+
+   .partner__img__5 {
+      width: 60%;
+   }
+   .partner__img__7 {
+      width: 60%;
    }
 
    .partner__img__2 {
@@ -477,15 +484,15 @@ a.navbar-brand {
    }
 
    .partner__img__3 {
-      width: 80%;
+      width: 60%;
    }
 
    .partner__img__4 {
-      width: 55%;
+      width: 35%;
    }
 
    .partner__img__6 {
-      width: 60%;
+      width: 50%;
    }
 }
 

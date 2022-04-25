@@ -31,11 +31,7 @@ h2, h5 {
 /* Table */
 thead, td, th {
    min-width: 7vw !important;
-   /* max-width: 300px; */
    height: max-content;
-   /* word-wrap: break-word; */
-   /* max-width: 25vw !important; */
-   /* overflow-wrap: break-word; */
 }
 
 .invalidFile {
