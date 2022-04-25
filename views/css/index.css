@@ -27,11 +27,6 @@
    font-family: var(--main-font);
 }
 
-.fw-bold {
-   font-family: 'Montserrat-Bold';
-   font-weight: bold;
-}
-
 .nav-link:hover{
    color: var(--bs-blue) !important;
 }
