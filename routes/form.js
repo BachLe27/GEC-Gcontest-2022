@@ -38,7 +38,7 @@ router.get('/:formID', (req, res) => {
 
       if (form == undefined) res.redirect('/form/1');
 
-      if (form.input.length != 13) { 
+      if (form.input.length != 12) { 
          res.redirect('/form/1');
       }
    }
