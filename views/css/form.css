@@ -34,7 +34,26 @@ thead, td, th {
    height: max-content;
 }
 
+table thead th {
+   position: -webkit-sticky; 
+   position: sticky;
+   top: 0;
+   z-index: 1; 
+}
+
+th {
+   background-color: #035397 !important;
+   color: #fff;
+   font-weight: bold;
+}
+
 .invalidFile {
    color: rgb(216, 0, 0);
    display: none;
 }
+
+.table-responsive {
+   max-height: 500px;
+   overflow: auto;
+   display:inline-block;
+ }
