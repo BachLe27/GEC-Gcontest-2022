@@ -57,10 +57,10 @@ th {
    max-height: 500px;
    overflow: auto;
    display:inline-block;
- }
+   
+}
 
 .manager__container {
    position: fixed;
    width: 100%;
 }
- 
