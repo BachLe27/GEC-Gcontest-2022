@@ -22,11 +22,31 @@ router.get('/:formID', (req, res) => {
    }
    
    let form = app.get('form');
+
+   if (form == undefined) res.redirect('/form');
+
+   if (formID == 2) {
+
+      if (form == undefined) res.redirect('/form/1');
+
+      if (form.input.length != 11) { 
+         res.redirect('/form/1');
+      }
+   }
+
+   if (formID == 3) {
+
+      if (form == undefined) res.redirect('/form/1');
+
+      if (form.input.length != 13) { 
+         res.redirect('/form/1');
+      }
+   }
+
    // console.log(form);
 
    // User skip 
-   if (form == undefined) res.redirect('/form');
-
+   
    
    res.sendFile(`form${req.params.formID}.html`, {root: path.join(__dirname, '../views/form')});
 
@@ -60,10 +80,14 @@ router.post('/1', upload.single('CV1'), (req, res) => {
 })
 
 router.post('/2', (req, res) => {
-   console.log(req.body);
+   // console.log(req.body);
    let form = app.get('form');
 
    if (form == undefined) res.redirect('/form');
+
+   if (form.input.length != 11) { 
+      res.redirect('/form/1');
+   }
 
    for (let x in req.body) {
       if (form.field.includes(x)) {
@@ -104,7 +128,12 @@ router.post('/3',
    let secondCVIndex = 22;
 
    let form = app.get('form'), cnt = 1;
+
    if (form == undefined) res.redirect('/form');
+
+   if (form.input.length != 12) { 
+      res.redirect('/form/1');
+   }
 
    for (let x in req.body) {
       cnt++;
@@ -133,6 +162,7 @@ router.post('/3',
          }
       }
    }
+
 
    const sendForm = new Form({
       field: form.field,
