@@ -438,7 +438,7 @@ a.navbar-brand {
 
 /* Bảo trợ truyền thông */
 .partner__img__6 {
-   width: 220px;
+   width: 420px;
 }
 
 /* Tài trợ hiện vật */
@@ -472,7 +472,7 @@ a.navbar-brand {
    }
 
    .partner__img__6 {
-      width: 50%;
+      width: 100%;
    }
 }
 
@@ -492,6 +492,18 @@ a.navbar-brand {
    background-color: #03045E;
 }
 
+.about__img img {
+   width: 250px;
+   margin: 0 auto;
+   /* object-position: 50% 0; */
+}
+
+
+@media screen and (max-width: 767px) {
+   .about__img img {
+      width: 45%;
+   }
+}
 
 /* --------Contact-------- */
 
