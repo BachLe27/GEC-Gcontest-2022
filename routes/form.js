@@ -100,7 +100,7 @@ router.post('/2', (req, res) => {
 
    app.set('form', form);
 
-   if (form.input[form.input.length - 1] == 'Chưa') {
+   if (form.input[form.input.length - 1] == 'Chưa có team') {
       const sendForm = new Form({
          field: form.field,
          input: form.input
