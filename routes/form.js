@@ -23,6 +23,8 @@ router.get('/:formID', (req, res) => {
    
    let form = app.get('form');
 
+
+   console.log(form);
    if (form == undefined) res.redirect('/form');
 
    if (formID == 2) {
@@ -163,6 +165,9 @@ router.post('/3',
       }
    }
 
+   if (form.input.length != 34) {
+      res.redirect('/form/1');
+   }
 
    const sendForm = new Form({
       field: form.field,
