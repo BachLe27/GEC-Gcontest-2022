@@ -165,17 +165,17 @@ router.post('/3',
       }
    }
 
-   if (form.input.length != 34) {
+   if (form.input.length != 35) {
       res.redirect('/form/1');
+   } else {
+      const sendForm = new Form({
+         field: form.field,
+         input: form.input
+      }) 
+   
+      sendForm.save();
+      res.sendFile('success.html', {root: path.join(__dirname, '../views/form')});
    }
-
-   const sendForm = new Form({
-      field: form.field,
-      input: form.input
-   }) 
-
-   sendForm.save();
-   res.sendFile('success.html', {root: path.join(__dirname, '../views/form')});
 })
 
 // router.post('/:formID',  (req, res) => {
