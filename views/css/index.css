@@ -88,7 +88,7 @@ a.navbar-brand {
 }
 
 .page-header {
-   height: 100vh;
+   min-height: 100vh;
    padding: 0 1rem;
 }
 
@@ -157,7 +157,7 @@ a.navbar-brand {
 
 /* Intro */
 .intro {
-   min-height: 80vh;
+   min-height: 70vh;
    color: rgb(231, 231, 231);
    background-image: radial-gradient( circle 610px at 5.2% 51.6%,  rgba(5,8,114,1) 0%, rgba(7,3,53,1) 97.5% );
 }
@@ -364,7 +364,7 @@ a.navbar-brand {
    background-color: rgba(3, 4, 94, 0.6);
    background-blend-mode: soft-light;
    color: #ffffff;
-   min-height: 100vh;
+   min-height: 70vh;
 }
 
 .rewards .line {
@@ -520,7 +520,7 @@ a.navbar-brand {
 .contact .container {
    z-index: 1;
    position: relative;
-   min-height: 60vh;
+   min-height: 50vh;
 }
 
 .contact h5 {
