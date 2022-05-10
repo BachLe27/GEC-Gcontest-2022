@@ -9,8 +9,9 @@ const upload = require('../helpers/filehelper');
 // @desc    Form
 // @access  Public
 router.get('/', (req, res) => {
-   res.sendFile('form.html', {root: path.join(__dirname, '../views/form')});
-   app.set('form', {currentForm: 1});
+   res.redirect('https://forms.gle/214YyqhRfY1jyb9D7');
+   // res.sendFile('form.html', {root: path.join(__dirname, '../views/form')});
+   // app.set('form', {currentForm: 1});
 }) 
 
 router.get('/:formID', (req, res) => {
