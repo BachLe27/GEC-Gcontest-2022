@@ -7,7 +7,7 @@ const https = require('https');
 const fs = require('fs');
 const cors = require('cors');
 const multer = require('multer');
-const cookieParser = require('cookie-parser');
+//const cookieParser = require('cookie-parser');
 
 const credentials = {
    ca: fs.readFileSync("./sslcert/ca_bundle.crt"),
@@ -23,7 +23,7 @@ const PORT = process.env.PORT || 8443;
 app.use(express.static('views'));
 app.use(bodyParser.urlencoded({extended: true}));
 
-app.use(cookieParser());
+//app.use(cookieParser());
 // app.use(cors());
 
 app.set('view engine', 'pug');
