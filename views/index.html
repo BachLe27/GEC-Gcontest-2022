@@ -12,7 +12,7 @@
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 
    <!-- Favicon -->
-   <link rel="icon" type="image/x-icon" href="./assets/img/gcon2.png"">
+   <link rel="icon" type="image/x-icon" href="./assets/img/gcon2.png">
 
    <!-- Animation on scroll -->
    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -80,17 +80,26 @@
 
    <!-- Page Header -->
    <header id="page-header">
-      <div class="page-header d-flex flex-nowrap align-items-center justify-content-center">
-         <div class="page-header__left d-flex order-1 " data-aos="fade-down" data-aos-duration="1200">
+      <div class="page-header d-flex flex-lg-row flex-column align-items-center justify-content-center">
+
+         <!-- Left -->
+         <div class="page-header__left d-flex col-lg-7 mt-5 mt-lg-0" data-aos="fade-down" data-aos-duration="1200">
 
             <div class="page-header__left__text text-center">
-               
-               <img class="page__header__background" src="./assets/img/text1.png" alt="background">
+               <img class="page__header__background mb-2" src="./assets/img/text1.png" alt="background">
+               <h1 class="fw-bold">VÒNG CHUNG KẾT</h1>
+               <h3 class="fw-bold"><i class="bi bi-alarm"></i> 18h00 - 12/06/2022</h3>
+               <h3 class="fw-bold"><i class="bi bi-geo-alt"></i> Hội trường D201 trường Đại học Ngoại thương</h3>
+            </div>
+         </div>
 
-               <form class="d-flex align-items-center justify-content-center" action="/form" method="get">
-                  <button class="page-header__left__button btn btn-outline-primary mt-3 fw-bold" type="submit">Đăng ký ngay</button>
-               </form>
-               
+         <!-- Right -->
+         <div class="page-header__right col-lg-4 d-flex flex-column align-items-center mb-3 mb-lg-0">
+
+            <img class="page-header__right__img mb-2 d-none d-md-block" src="./assets/img/gcon.png" alt="gcon2">
+
+            <div class="d-flex align-items-center justify-content-center">
+               <a href="https://forms.gle/214YyqhRfY1jyb9D7" class="page-header__left__button btn btn-outline-primary mt-3 fw-bold" type="submit">Đăng ký ngay</a>
             </div>
          </div>
       </div>
@@ -312,9 +321,9 @@
                <p>CLB Kinh tế toàn cầu GEC được thành lập tháng 3 năm 2013 dưới sự bảo trợ chuyên môn của Khoa kinh tế quốc tế trường Đại học Ngoại Thương. Sau 9 năm hoạt động, với sự không ngừng nỗ lực cố gắng của các thế hệ thành viên, GEC đã trở thành một người đồng hành đáng tin cậy đối với các bạn sinh viên trên cả nước.</p>
             </div>
             
-            <form action="/form" method="get" class="d-flex align-items-center justify-content-center justify-content-lg-start col-lg-6 mt-2">
-               <button type="submit" class="btn btn-primary px-5 fw-bold">Đăng ký ngay</button>
-            </form>
+            <div class="d-flex align-items-center justify-content-center justify-content-lg-start col-lg-6 mt-2">
+               <a type="submit" class="btn btn-primary px-5 fw-bold">Đăng ký ngay</a>
+            </div>
          </div>
    
          <div class="about__img col-md-5 order-md-1 d-none d-md-flex justify-content-center align-items-center" data-aos="fade-up" data-aos-duration="1800" data-aos-offset="300">

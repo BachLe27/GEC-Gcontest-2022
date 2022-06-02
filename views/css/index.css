@@ -101,24 +101,38 @@ a.navbar-brand {
 .page-header__left {
    color: #fff;
 }
- 
-.page-header__left__text__title {
-   font-size: 5rem;
-   font-weight: bold;
-   color: #fff;
-   text-shadow: -1px 5px 2px #03045E;
-   text-transform: uppercase;
+
+.page-header__left form {
+   width: 100%;
 }
 
-.page__header__background {
-   width: 55%;
+.page-header__left__text {
+   text-shadow: #8feeff 0px 0px 4px;
 }
+
+.page-header__left__text h1 {
+   font-size: 3rem;
+}
+
+
+.page__header__background {
+   width: 80%;
+}
+
+.page-header__right__img {
+   width: 300px;
+}
+
 
 @media screen and (max-width: 992px) {
    .page__header__background {
       width: 90%;
    }
-   
+
+   .page-header__left__text h1 {
+      font-size: 2.3rem;
+   }
+
 }
 
 @media screen and (max-width: 400px) {
@@ -133,11 +147,10 @@ a.navbar-brand {
    .page-header {
       height: 90vh;
    }
+   
 }
 
-.page-header__left form {
-   width: 100%;
-}
+
 
 .page-header__left__button {
    padding: 0.7rem 3rem;
@@ -488,7 +501,7 @@ a.navbar-brand {
    font-family: var(--second-font);
 }
 
-.about button {
+.about a {
    background-color: #03045E;
 }
 
