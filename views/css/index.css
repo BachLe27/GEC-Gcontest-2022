@@ -111,16 +111,16 @@ a.navbar-brand {
 }
 
 .page-header__left__text h1 {
-   font-size: 3rem;
+   font-size: 3.2rem;
 }
 
 
 .page__header__background {
-   width: 80%;
+   width: 75%;
 }
 
 .page-header__right__img {
-   width: 300px;
+   width: 80%;
 }
 
 
@@ -130,7 +130,7 @@ a.navbar-brand {
    }
 
    .page-header__left__text h1 {
-      font-size: 2.3rem;
+      font-size: 2.1rem;
    }
 
 }
@@ -141,7 +141,7 @@ a.navbar-brand {
    }
 
    #page-header {
-      min-height: 90vh !important;
+      min-height: 80vh !important;
    }
 
    .page-header {
