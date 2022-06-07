@@ -143,13 +143,8 @@ a.navbar-brand {
    #page-header {
       min-height: 80vh !important;
    }
-
-   .page-header {
-      height: 90vh;
-   }
    
 }
-
 
 
 .page-header__left__button {
@@ -168,7 +163,31 @@ a.navbar-brand {
    margin-right: 2rem;
 }
 
+/* Teams */
+.teams {
+   /* height: max-content; */
+   background-image: linear-gradient(to top,rgba(2, 3, 48, 0.842), rgba(2, 0, 27, 0.897)), url("../assets/img/team-bg.jpg");
+   /* background-size: cover; */
+}
+
+.teams h1 {
+   font-size: 3rem;
+   font-family: Quaranta Bold;
+   text-shadow: #00daf7 0px 0px 10px;
+}
+
+.team-name {
+   text-shadow: #00daf7 0px 0px 10px;
+   font-size: 2rem;
+}
+
+.team-img {
+   width: 70%;
+   height: 70%;
+}
+
 /* Intro */
+
 .intro {
    min-height: 70vh;
    color: rgb(231, 231, 231);
