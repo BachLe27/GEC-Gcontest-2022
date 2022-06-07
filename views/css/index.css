@@ -144,6 +144,9 @@ a.navbar-brand {
       min-height: 80vh !important;
    }
    
+   .teams h1 {
+      font-size: 2.3rem;
+   }
 }
 
 
@@ -166,7 +169,7 @@ a.navbar-brand {
 /* Teams */
 .teams {
    /* height: max-content; */
-   background-image: linear-gradient(to top,rgba(2, 3, 90, 0.911), rgba(2, 0, 27, 0.897)), url("../assets/img/team-bg.jpg");
+   background-image: linear-gradient(to top,rgba(2, 3, 90, 0.911), rgba(9, 0, 133, 0.897)), url("../assets/img/team-bg.jpg");
    /* background-size: cover; */
 }
 
