@@ -1,2 +1,5 @@
 /node_modules
 bachlamsung123.pem
+/uploads
+/sslcert
+/config/default.json
